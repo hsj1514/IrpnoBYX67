@@ -3,7 +3,7 @@ const FooterStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor : '#666',
-    height : '100px'
+    height : '100px',
 }
 
 function Footer(){
