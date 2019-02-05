@@ -20,9 +20,10 @@ var Header_Style = {
   display: 'flex',
   justifyContent: 'left',
   alignItems: 'center',
-  backgroundColor: '#888',
+  backgroundColor: '#999',
   height: '80px',
-  minWidth: '600px'
+  minWidth: '600px',
+  marginBottom: '20px'
 };
 var Logo_Style = {
   fontSize: '30px',
@@ -42,14 +43,14 @@ function Header() {
     style: Header_Style,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -57,14 +58,14 @@ function Header() {
     style: Logo_Style,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
   }, "Todo Application")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -72,7 +73,7 @@ function Header() {
     style: Achievement_Style,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }, "\uB098\uC758 \uC131\uCDE8 \uBCF4\uAE30")));
@@ -82,10 +83,10 @@ function Header() {
 
 /***/ }),
 
-/***/ "./components/MainContents.js":
-/*!************************************!*\
-  !*** ./components/MainContents.js ***!
-  \************************************/
+/***/ "./components/MainContentsLeft.js":
+/*!****************************************!*\
+  !*** ./components/MainContentsLeft.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -93,36 +94,126 @@ function Header() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\\uC2B9\uC8FC\\Desktop\\nextjs\\components\\MainContents.js";
+var _jsxFileName = "C:\\Users\\\uC2B9\uC8FC\\Desktop\\nextjs\\components\\MainContentsLeft.js";
 
-var MainContents_Style = {
+var MainContents_Left_Style = {
   display: 'flex',
+  float: 'left',
   flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
+  // justifyContent: 'center',
+  alignItems: 'left',
   height: '100%',
-  minHeight: 'calc(100vh - 200px)'
+  minHeight: 'calc(100vh - 100px)',
+  width: '49%',
+  border: 'solid 1px'
+};
+var Title_Left_Style = {
+  textAlign: 'center',
+  padding: '15px 0px',
+  backgroundColor: '#999'
+};
+var Content_Left_Style = {
+  marginTop: '20px',
+  marginLeft: '10px'
 };
 
-function MainContents() {
+function MainContents_Left() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "body",
-    style: MainContents_Style,
+    style: MainContents_Left_Style,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title_left",
+    style: Title_Left_Style,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 27
     },
     __self: this
-  }, "main"));
+  }, "\uC77C\uC0C1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content_left",
+    style: Content_Left_Style,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, "\uBCF8\uBB38"));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (MainContents);
+function Spreader() {}
+
+function Folder() {}
+
+/* harmony default export */ __webpack_exports__["default"] = (MainContents_Left);
+
+/***/ }),
+
+/***/ "./components/MainContentsRight.js":
+/*!*****************************************!*\
+  !*** ./components/MainContentsRight.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\\uC2B9\uC8FC\\Desktop\\nextjs\\components\\MainContentsRight.js";
+
+var MainContents_Right_Style = {
+  display: 'flex',
+  float: 'right',
+  flexDirection: 'column',
+  // justifyContent: 'center',
+  alignItems: 'left',
+  height: '100%',
+  minHeight: 'calc(100vh - 100px)',
+  width: '49%',
+  border: 'solid 1px'
+};
+var Title_Right_Style = {
+  textAlign: 'center',
+  padding: '15px 0px',
+  backgroundColor: '#999'
+};
+var Content_Right_Style = {
+  marginTop: '20px',
+  marginLeft: '10px'
+};
+
+function MainContents_Right() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: MainContents_Right_Style,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title_right",
+    style: Title_Right_Style,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, "\uD504\uB85C\uC81D\uD2B8"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "content_right",
+    style: Content_Right_Style,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, "\uBCF8\uBB38"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (MainContents_Right);
 
 /***/ }),
 
@@ -9982,8 +10073,10 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header.js */ "./components/Header.js");
-/* harmony import */ var _components_MainContents_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MainContents.js */ "./components/MainContents.js");
+/* harmony import */ var _components_MainContentsLeft_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MainContentsLeft.js */ "./components/MainContentsLeft.js");
+/* harmony import */ var _components_MainContentsRight_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MainContentsRight.js */ "./components/MainContentsRight.js");
 var _jsxFileName = "C:\\Users\\\uC2B9\uC8FC\\Desktop\\nextjs\\pages\\App.js";
+
 
 
  // import Footer from "../components/Footer.js"
@@ -9995,19 +10088,25 @@ function App() {
     id: "wrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MainContents_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MainContentsLeft_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 12
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MainContentsRight_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
     },
     __self: this
   }));

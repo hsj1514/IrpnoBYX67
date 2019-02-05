@@ -4,9 +4,10 @@ const Header_Style = {
     display : 'flex',
     justifyContent: 'left',
     alignItems: 'center',
-    backgroundColor : '#888',
+    backgroundColor : '#999',
     height : '80px',
     minWidth : '600px',
+    marginBottom : '20px',
 }
 
 const Logo_Style = {
