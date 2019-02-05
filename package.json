@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "express": "^4.14.1",
     "fs": "file:node_modules/fs",
     "isomorphic-unfetch": "^3.0.0",
@@ -21,5 +22,9 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "tls": "0.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1"
   }
 }

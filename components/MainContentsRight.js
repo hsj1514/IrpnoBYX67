@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const MainContents_Right_Style = {
     display : 'flex',
     float : 'right',
@@ -25,7 +27,9 @@ function MainContents_Right(){
   return(
     <div style={MainContents_Right_Style}>
       <div className="title_right" style={Title_Right_Style}>프로젝트</div>
-      <div className="content_right" style={Content_Right_Style}>본문</div>
+      <div className="content_right" style={Content_Right_Style}>
+        <ProjectList />
+      </div>
     </div>
   )
 }
