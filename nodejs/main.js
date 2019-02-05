@@ -15,6 +15,7 @@ var app = http.createServer(function(request,response){
           console.log(topics);
           response.writeHead(200);
           response.end('success');
+          return topics ;
         });
 });
 app.listen(4000);

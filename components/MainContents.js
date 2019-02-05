@@ -1,4 +1,4 @@
-const MainContentsStyle = {
+const MainContents_Style = {
     display : 'flex',
     flexDirection : 'column',
     justifyContent: 'center',
@@ -9,7 +9,7 @@ const MainContentsStyle = {
 
 function MainContents(){
   return(
-    <div className="body" style={MainContentsStyle}>
+    <div className="body" style={MainContents_Style}>
       <div>main</div>
     </div>
   )
