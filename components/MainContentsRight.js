@@ -71,4 +71,5 @@ function MainContents_Right(){
   )
 }
 
+
 export default MainContents_Right
