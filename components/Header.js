@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+
 const Header_Style = {
     display : 'flex',
     justifyContent: 'left',
@@ -10,27 +11,40 @@ const Header_Style = {
     marginBottom : '20px',
 }
 
-const Logo_Style = {
-  fontSize : '30px',
-  marginLeft : '15px',
-  textDecoration : 'none',
-  color : 'black',
-}
-
-const Achievement_Style = {
-  marginLeft : '40%',
-  textDecoration : 'none',
-  color : 'black',
-}
 
 function Header(){
   return(
     <header className="header" style={Header_Style}>
+
+    <style jsx>{`
+      .logo {
+        font-size : 30px;
+        margin-left : 15px;
+        text-decoration : none;
+        color : black;
+      }
+
+      .logo:hover {
+        opacity : 0.5;
+      }
+
+      .achievement {
+        font-size : 15px;
+        margin-left : 40%;
+        text-decoration : none;
+        color : black;
+      }
+
+      .achievement:hover {
+        opacity : 0.5;
+      }
+    `}</style>
+
       <Link href="/">
-        <a className="logo" style={Logo_Style}>Todo Application</a>
+        <a className="logo">Todo Application</a>
       </Link>
       <Link href="/">
-        <a className=" achievement" style={Achievement_Style}>나의 성취 보기</a>
+        <a className=" achievement" >완료목록 보기</a>
       </Link>
     </header>
   )

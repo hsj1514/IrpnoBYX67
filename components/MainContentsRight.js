@@ -29,7 +29,7 @@ function MainContents_Right(){
   var list = '<ul>';
   var i = 0;
   while(i < projects.length){
-    list = list + `<li style="list-style-type : none;"><a style="background-color : #f7f7f7; text-decoration : none; font-size : 20px; color : black; padding : 5px; border-radius : 2px;" class="projects" href="/id=${projects[i]}">${projects[i]}</a></li><br><br>`;
+    list = list + `<li style="list-style-type : none;"><a style="background-color : #f7f7f7; text-decoration : none; font-size : 20px; color : black; padding : 5px; border-radius : 2px;" href="/id=${projects[i]}">${projects[i]}</a></li><br><br>`;
     i = i + 1;
   }
   list = list+'</ul>';
