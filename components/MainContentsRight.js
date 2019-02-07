@@ -33,7 +33,6 @@ function MainContents_Right(){
     i = i + 1;
   }
   list = list+'</ul>';
-  console.log(list);
   return(
     <div style={MainContents_Right_Style}>
       <div className="title_right" style={Title_Right_Style}>

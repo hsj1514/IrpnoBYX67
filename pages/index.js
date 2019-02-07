@@ -8,16 +8,7 @@ const Index = () => (
   <App />
 )
 
-// Index.getInitialProps = async function() {
-//   const res = await fetch('https://localhost:4000')
-//   const data = await res.json()
-//
-//   console.log(` Show data fetched. Count: ${data.length}`)
-//
-//   return {
-//     shows: data
-//   }
-// }
+
 
 
 
