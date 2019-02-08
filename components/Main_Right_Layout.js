@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import PopupForm_Right from "../components/PopupForm_Right.js"
+
 
 const Main_Right_Layout_Style = {
   display : 'flex',
@@ -33,15 +35,16 @@ function Main_Right_Layout(props){
 
       <style jsx>{`
         .addProject {
-          text-decoration : none;
           color : red;
           font-size : 20px;
           padding : 5px;
           margin-top : 20px;
+          margin-left : 10px;
+          margin-right : 10px;
           display : flex;
           flex-direction : column;
           align-items : center;
-          opacity : 0.5;
+          opacity : 0.7;
 
         }
 
@@ -50,9 +53,7 @@ function Main_Right_Layout(props){
         }
       `}</style>
 
-      <Link href="/">
-        <a className="addProject">+) 프로젝트 추가하기</a>
-      </Link>
+      <PopupForm_Right />
 
       {props.children}
 

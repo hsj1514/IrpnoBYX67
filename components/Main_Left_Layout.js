@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import PopupForm_Left from "../components/PopupForm_Left.js"
 
 
 const Main_Left_Layout_Style = {
@@ -54,24 +55,7 @@ function Main_Left_Layout(props){
         background-color : #f7f7f7;
         border-radius : 2px;
         padding : 5px;
-        margin : 0px 20px;
-      }
-
-      .addTodo {
-        text-decoration : none;
-        color : red;
-        font-size : 20px;
-        padding : 5px;
-        margin-top : 20px;
-        display : flex;
-        flex-direction : column;
-        align-items : center;
-        opacity : 0.5;
-
-      }
-
-      .addTodo:hover {
-        opacity : 1;
+        margin : 0px 15px;
       }
       `}</style>
 
@@ -79,9 +63,9 @@ function Main_Left_Layout(props){
         일상
       </div>
 
-      <Link href="/">
-        <a className="addTodo">+) 계획 추가하기</a>
-      </Link>
+      <PopupForm_Left />
+
+
 
       <div style={Transparent}>
         <Link href="/">
