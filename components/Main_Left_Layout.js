@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 
-const MainContents_Left_Style = {
+const Main_Left_Layout_Style = {
     display : 'flex',
     float : 'left',
     flexDirection : 'column',
@@ -18,22 +18,15 @@ const Title_Left_Style = {
   backgroundColor : '#999',
 }
 
-const Content_Left_Style = {
-  borderTop : 'groove 1px',
-  padding : '2px',
-  margin : '3px 0px',
-  height : '150px',
-}
-
 const Transparent = {
   marginTop : '35px',
   marginBottom : '20px',
 }
 
 
-function MainContents_Left(){
+function Main_Left_Layout(props){
   return(
-    <div style={MainContents_Left_Style}>
+    <div style={Main_Left_Layout_Style}>
 
       <style jsx>{`
       .today:hover {
@@ -99,20 +92,11 @@ function MainContents_Left(){
         </Link>
       </div>
 
-      <div className="content_left">
-        <div style={Content_Left_Style}>
-          <div style={{paddingBottom : '10px', fontSize : '12px',}}>오늘 4월 26일</div>
-          <div>학원 가기</div>
-        </div>
-        <div style={Content_Left_Style}>
-          <div style={{paddingBottom : '10px', fontSize : '12px',}}>목요일 5월 15일</div>
-          <div>밥 먹기</div>
-        </div>
-      </div>
+      {props.children}
 
     </div>
   )
 }
 
 
-export default MainContents_Left
+export default Main_Left_Layout

@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "body-parser": "^1.18.3",
     "express": "^4.14.1",
     "fs": "file:node_modules/fs",
     "isomorphic-unfetch": "^3.0.0",

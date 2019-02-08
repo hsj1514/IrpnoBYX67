@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const MainContents_Right_Style = {
+const Main_Right_Layout_Style = {
   display : 'flex',
   float : 'right',
   flexDirection : 'column',
@@ -24,17 +24,9 @@ const Content_Right_Style = {
 
 
 
-function MainContents_Right(){
-  const projects = ['Project 1' , 'Project 2' , 'Project 3' , 'Project 4' , 'Project 5' , 'Project 6']
-  var list = '<ul>';
-  var i = 0;
-  while(i < projects.length){
-    list = list + `<li style="list-style-type : none;"><a style="background-color : #f7f7f7; text-decoration : none; font-size : 20px; color : black; padding : 5px; border-radius : 2px;" href="/id=${projects[i]}">${projects[i]}</a></li><br><br>`;
-    i = i + 1;
-  }
-  list = list+'</ul>';
+function Main_Right_Layout(props){
   return(
-    <div style={MainContents_Right_Style}>
+    <div style={Main_Right_Layout_Style}>
       <div className="title_right" style={Title_Right_Style}>
         프로젝트
       </div>
@@ -62,13 +54,11 @@ function MainContents_Right(){
         <a className="addProject">+) 프로젝트 추가하기</a>
       </Link>
 
-      <div className="content_right" style={Content_Right_Style}>
-        <div dangerouslySetInnerHTML={ {__html: list} }>
-        </div>
-      </div>
+      {props.children}
+
     </div>
   )
 }
 
 
-export default MainContents_Right
+export default Main_Right_Layout
