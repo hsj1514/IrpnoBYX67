@@ -1,6 +1,12 @@
+const Form_Style = {
+  marginLeft : '10px',
+  paddingBottom : '150px',
+}
+
+
 function Form_Right(){
   return (
-    <form action="/create_process" method="post" class="addStudentForm" id="form">
+    <form style={Form_Style} action="/create_process" method="post" class="addStudentForm" id="form">
 
 
     &nbsp;과목명&nbsp;<input type="text" name="subject" placeholder="ex) 물리" required></input>
@@ -11,7 +17,7 @@ function Form_Right(){
 
 
     <input class="complete-button" type="submit" value="완료" />
-    
+
     </form>
   )
 }

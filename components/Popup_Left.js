@@ -46,7 +46,13 @@ export default class Popup_Left extends Component {
                 opacity : 1;
               }
 
+              .title {
+                margin-left : 10px;
+              }
+
               .close {
+                margin-left : 10px;
+                margin-bottom : 10px;
                 text-decoration : none;
                 color : red;
               }
@@ -60,7 +66,7 @@ export default class Popup_Left extends Component {
                     onClickAway={() => this.closeModal()}
                 >
                     <div>
-                        <h1>계획 추가하기</h1>
+                        <h1 className="title">계획 추가하기</h1>
                         <Form_Left />
                         <a className="close" href="javascript:void(0);" onClick={() => this.closeModal()}>닫기</a>
                     </div>
