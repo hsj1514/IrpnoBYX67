@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
+import Form_Right from "../components/Form_Right.js"
 
 export default class PopupForm_Right extends Component {
 
@@ -44,6 +45,11 @@ export default class PopupForm_Right extends Component {
               .addProject:hover {
                 opacity : 1;
               }
+
+              .close {
+                text-decoration : none;
+                color : red;
+              }
               `}</style>
                 <input className="addProject" type="button" value="프로젝트 추가하기" onClick={() => this.openModal()} />
                 <Modal
@@ -54,9 +60,9 @@ export default class PopupForm_Right extends Component {
                     onClickAway={() => this.closeModal()}
                 >
                     <div>
-                        <h1>Title</h1>
-                        <p>Some Contents</p>
-                        <a href="javascript:void(0);" onClick={() => this.closeModal()}>Close</a>
+                        <h1>프로젝트 추가하기</h1>
+                        <Form_Right />
+                        <a className="close" href="javascript:void(0);" onClick={() => this.closeModal()}>닫기</a>
                     </div>
                 </Modal>
             </section>

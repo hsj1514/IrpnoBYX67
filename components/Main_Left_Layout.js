@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import PopupForm_Left from "../components/PopupForm_Left.js"
+import Popup_Left from "../components/Popup_Left.js"
 
 
 const Main_Left_Layout_Style = {
@@ -63,7 +63,7 @@ function Main_Left_Layout(props){
         일상
       </div>
 
-      <PopupForm_Left />
+      <Popup_Left />
 
 
 

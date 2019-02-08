@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import PopupForm_Right from "../components/PopupForm_Right.js"
+import Popup_Right from "../components/Popup_Right.js"
 
 
 const Main_Right_Layout_Style = {
@@ -53,7 +53,7 @@ function Main_Right_Layout(props){
         }
       `}</style>
 
-      <PopupForm_Right />
+      <Popup_Right />
 
       {props.children}
 
