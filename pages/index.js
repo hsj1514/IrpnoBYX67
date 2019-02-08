@@ -1,10 +1,16 @@
 import fetch from 'isomorphic-unfetch'
 import App from './App.js';
-
+import axios from 'axios';
 
 const Index = () => (
   <App />
 )
+
+
+axios.post('http://localhost:5000/add', {
+  title : '제에발',
+  description : '제발'
+})
 
 
 Index.getInitialProps = async function() {
@@ -13,7 +19,7 @@ Index.getInitialProps = async function() {
 
 
 
-  // console.log(`Show data fetched. Count: ${data.length}`)
+
 
   return {
     shows: data
