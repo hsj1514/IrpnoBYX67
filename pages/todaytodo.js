@@ -39,13 +39,6 @@ class TodayTodo extends React.Component {
         const { todos } = this.props;
 
 
-//-------------------------------------------
-
-        // console.log(todos)
-        // console.log(todos[0])
-        // console.log(todos[0].day)
-        // console.log(todos.length)
-
 
         function select_Today_Todo_Id(todos){
           var i = 0;
@@ -58,11 +51,6 @@ class TodayTodo extends React.Component {
           }
           return list;
         }
-        // console.log(todos)
-        // console.log(select_Today_Todo_Id(todos))
-        // console.log(select_Today_Todo_Id(todos)[0])
-        // console.log(select_Today_Todo_Id(todos)[1])
-        // console.log(select_Today_Todo_Id(todos).length)
 
         function make_Today_Todo_List(){
           var i = 0;
@@ -78,22 +66,13 @@ class TodayTodo extends React.Component {
         console.log(today_todo)
 
 
-//----------------------------------------
 
-
-
-
-
-
-
-
-        const todoList = todos.map(
+        const todoList = today_todo.map(
             todo =>
 
 
             <li style={Todo_Style}>
             <div style={{fontSize : '12px',}}>{todo.year}/{todo.month}/{todo.day}</div>
-            <div>{todo.created[0]}{todo.created[1]}{todo.created[2]}{todo.created[3]}</div>
             <div>{todo.title}</div>
             <div>{todo.description}</div>
             </li>
