@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Popup_Left from "../components/Popup_Left.js"
 
 
+
 const Main_Left_Layout_Style = {
     display : 'flex',
     float : 'left',
@@ -64,6 +65,7 @@ function Main_Left_Layout(props){
       </div>
 
       <Popup_Left />
+
 
 
 

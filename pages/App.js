@@ -6,6 +6,8 @@ import Main_Left_Content from "../components/Main_Left_Content.js"
 import Main_Right_Content from "../components/Main_Right_Content.js"
 
 
+
+
 function App(){
   return (
   <div>

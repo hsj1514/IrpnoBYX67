@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Form_Style = {
   marginLeft : '10px',
-  paddingBottom : '150px',
+  paddingBottom : '100px',
 }
 
 class Form_Left extends Component {
@@ -35,18 +35,24 @@ class Form_Left extends Component {
 
     return (
       <form style={Form_Style} onSubmit={this.onSubmit}>
-        <input
-          type="text"
-          name="title"
-          value={title}
-          onChange={this.onChange.bind(this)}
-        />
-        <input
-          type="text"
-          name="description"
-          value={description}
-          onChange={this.onChange.bind(this)}
-        />
+        <div>
+          계획 : <input
+            type="text"
+            name="title"
+            value={title}
+            onChange={this.onChange.bind(this)}
+          />
+        </div>
+        <p></p>
+        <div>
+          계획 설명(생략가능) : <input
+            type="text"
+            name="description"
+            value={description}
+            onChange={this.onChange.bind(this)}
+          />
+        </div>
+        <p></p>
         <button type="submit">Submit</button>
       </form>
     );
