@@ -10,7 +10,7 @@ const Main_Left_Layout_Style = {
     alignItems : 'left',
     height : '100%',
     minHeight : 'calc(100vh - 100px)',
-    width : '49%',
+    width : '99%',
     border : 'groove 1px',
 }
 
@@ -73,8 +73,8 @@ function Main_Left_Layout(props){
         <Link href="/todaytodo">
           <a className="today">오늘</a>
         </Link>
-        <Link href="/">
-          <a className="sevendays">앞으로의 7일</a>
+        <Link href="/alltodo">
+          <a className="sevendays">전체보기</a>
         </Link>
       </div>
 

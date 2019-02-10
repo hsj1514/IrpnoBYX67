@@ -56,11 +56,12 @@ class TodayTodo extends React.Component {
           var i = 0;
           var todo = [];
           while(i < select_Today_Todo_Id(todos).length){
-            todo.push(todos[i]);
+            todo.push(todos[select_Today_Todo_Id(todos)[i]-1]);
             i = i + 1;
           }
           return todo;
         }
+
 
         const today_todo = make_Today_Todo_List()
         console.log(today_todo)
