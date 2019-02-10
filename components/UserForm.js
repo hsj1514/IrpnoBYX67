@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const Form_Style = {
-  marginLeft : '10px',
-  paddingBottom : '150px',
-}
-
-class Form_Left extends Component {
+class UserForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -34,7 +29,7 @@ class Form_Left extends Component {
     const { title, description } = this.state;
 
     return (
-      <form style={Form_Style} onSubmit={this.onSubmit}>
+      <form onSubmit={this.onSubmit}>
         <input
           type="text"
           name="title"
@@ -53,5 +48,4 @@ class Form_Left extends Component {
   }
 }
 
-
-export default Form_Left
+export default UserForm
