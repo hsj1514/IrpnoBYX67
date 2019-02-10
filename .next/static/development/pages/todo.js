@@ -13935,12 +13935,12 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var today = new Date();
 var date = today.toISOString().substring(0, 10);
-var year = Number(date.substring(0, 4));
-console.log(year);
-var month = Number(date.substring(5, 7));
-console.log(month);
-var day = Number(date.substring(8, 10));
-console.log(day);
+var year = Number(date.substring(0, 4)); // console.log(year)
+
+var month = Number(date.substring(5, 7)); // console.log(month)
+
+var day = Number(date.substring(8, 10)); // console.log(day)
+
 var Todo_Style = {
   borderTop: 'groove 1px',
   padding: '2px',
@@ -13963,12 +13963,12 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var todos = this.props.todos; //-------------------------------------------
+      // console.log(todos)
+      // console.log(todos[0])
+      // console.log(todos[0].day)
+      // console.log(todos.length)
 
-      console.log(todos);
-      console.log(todos[0].day);
-      console.log(todos.length);
-
-      function selectTodayTodoId(todos) {
+      function select_Today_Todo_Id(todos) {
         var i = 0;
         var list = [];
 
@@ -13981,16 +13981,34 @@ function (_React$Component) {
         }
 
         return list;
+      } // console.log(todos)
+      // console.log(select_Today_Todo_Id(todos))
+      // console.log(select_Today_Todo_Id(todos)[0])
+      // console.log(select_Today_Todo_Id(todos)[1])
+      // console.log(select_Today_Todo_Id(todos).length)
+
+
+      function make_Today_Todo_List() {
+        var i = 0;
+        var todo = [];
+
+        while (i < select_Today_Todo_Id(todos).length) {
+          todo.push(todos[i]);
+          i = i + 1;
+        }
+
+        return todo;
       }
 
-      console.log(selectTodayTodoId(todos)); //----------------------------------------
+      var today_todo = make_Today_Todo_List();
+      console.log(today_todo); //----------------------------------------
 
       var todoList = todos.map(function (todo) {
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
           style: Todo_Style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 77
+            lineNumber: 94
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -13999,25 +14017,25 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 78
+            lineNumber: 95
           },
           __self: this
         }, todo.year, "/", todo.month, "/", todo.day), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79
+            lineNumber: 96
           },
           __self: this
         }, todo.created[0], todo.created[1], todo.created[2], todo.created[3]), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 97
           },
           __self: this
         }, todo.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 98
           },
           __self: this
         }, todo.description));
@@ -14025,7 +14043,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_pages_App_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
@@ -14035,14 +14053,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 104
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         style: {},
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 106
         },
         __self: this
       }, todoList)));

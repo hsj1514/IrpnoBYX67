@@ -8,13 +8,13 @@ const today = new Date();
 const date = today.toISOString().substring(0, 10)
 
 const year = Number(date.substring(0,4))
-console.log(year)
+// console.log(year)
 
 const month = Number(date.substring(5,7))
-console.log(month)
+// console.log(month)
 
 const day = Number(date.substring(8,10))
-console.log(day)
+// console.log(day)
 
 
 
@@ -41,12 +41,13 @@ class TodayTodo extends React.Component {
 
 //-------------------------------------------
 
-        console.log(todos)
-        console.log(todos[0].day)
-        console.log(todos.length)
+        // console.log(todos)
+        // console.log(todos[0])
+        // console.log(todos[0].day)
+        // console.log(todos.length)
 
 
-        function selectTodayTodoId(todos){
+        function select_Today_Todo_Id(todos){
           var i = 0;
           var list = [];
           while(i < todos.length){
@@ -57,8 +58,24 @@ class TodayTodo extends React.Component {
           }
           return list;
         }
+        // console.log(todos)
+        // console.log(select_Today_Todo_Id(todos))
+        // console.log(select_Today_Todo_Id(todos)[0])
+        // console.log(select_Today_Todo_Id(todos)[1])
+        // console.log(select_Today_Todo_Id(todos).length)
 
-        console.log(selectTodayTodoId(todos))
+        function make_Today_Todo_List(){
+          var i = 0;
+          var todo = [];
+          while(i < select_Today_Todo_Id(todos).length){
+            todo.push(todos[i]);
+            i = i + 1;
+          }
+          return todo;
+        }
+
+        const today_todo = make_Today_Todo_List()
+        console.log(today_todo)
 
 
 //----------------------------------------
