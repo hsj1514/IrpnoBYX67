@@ -1,0 +1,46 @@
+import React from 'react';
+import axios from 'axios';
+
+export default class UserForm extends React.Component {
+
+          state = {
+            title: '',
+            description: '',
+
+      };
+
+      handleChange = event => {
+        this.setState({ title: event.target.value });
+        this.setState({ description: event.target.value });
+      }
+
+      handleSubmit = event => {
+        // event.preventDefault();
+
+        axios.post('http://localhost:5000/add', {
+          title: this.state.title,
+          description: this.state.description,
+        })
+
+          .then(res => {
+            console.log(res);
+            console.log(res.data);
+          })
+      }
+
+
+
+      render() {
+        return (
+          <form onSubmit={this.handleSubmit}>
+
+            <label>title:  <input type="text" name="title" onChange={this.handleChange}/></label><br/>
+
+            <label>description:  <input type="text" name="description" onChange={this.handleChange}/></label><br/>
+
+            <button type="submit">Add</button>
+
+          </form>
+        )
+      }
+    }

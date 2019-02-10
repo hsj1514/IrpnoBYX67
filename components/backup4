@@ -1,0 +1,32 @@
+import React, { Component } from 'react';
+import axios from 'axios';
+
+class UserForm extends React.Component {
+
+      constructor(props) {
+    		super(props);
+        this.state = {
+          value: ''
+        }
+    	}
+
+
+      handleInputChange(e){
+        console.log('CHANGE')
+        this.setState({
+          value: e.target.value
+        })
+      }
+
+      render() {
+        return (
+          <div className="App">
+            <h1>Hello</h1>
+            <input onChange={this.handleInputChange.bind(this)} type="text" value={this.state.value} autoComplete={"off"}/>
+          </div>
+        );
+      }
+    }
+
+
+export default UserForm

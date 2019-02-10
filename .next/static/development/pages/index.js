@@ -23,7 +23,7 @@ function Form_Left() {
     style: Form_Style,
     action: "/create_process",
     method: "post",
-    class: "addStudentForm",
+    className: "addStudentForm",
     id: "form",
     __source: {
       fileName: _jsxFileName,
@@ -41,7 +41,7 @@ function Form_Left() {
     },
     __self: this
   }), "\xA0\uC218\uC5C5\uB8CC(\uB2E8\uC704 : \uB9CC)\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    class: "inputTuition",
+    className: "inputTuition",
     type: "number",
     name: "tuition",
     placeholder: "\uC22B\uC790\uB9CC \uC785\uB825",
@@ -52,7 +52,7 @@ function Form_Left() {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    class: "complete-button",
+    className: "complete-button",
     type: "submit",
     value: "\uC644\uB8CC",
     __source: {
@@ -90,7 +90,7 @@ function Form_Right() {
     style: Form_Style,
     action: "/create_process",
     method: "post",
-    class: "addStudentForm",
+    className: "addStudentForm",
     id: "form",
     __source: {
       fileName: _jsxFileName,
@@ -108,7 +108,7 @@ function Form_Right() {
     },
     __self: this
   }), "\xA0\uC218\uC5C5\uB8CC(\uB2E8\uC704 : \uB9CC)\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    class: "inputTuition",
+    className: "inputTuition",
     type: "number",
     name: "tuition",
     placeholder: "\uC22B\uC790\uB9CC \uC785\uB825",
@@ -119,7 +119,7 @@ function Form_Right() {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    class: "complete-button",
+    className: "complete-button",
     type: "submit",
     value: "\uC644\uB8CC",
     __source: {
@@ -13875,8 +13875,8 @@ var Index = function Index() {
 };
 
 axios__WEBPACK_IMPORTED_MODULE_4___default.a.post('http://localhost:5000/add', {
-  title: '제에발',
-  description: '제발'
+  title: '과제 ㅈ댐',
+  description: '못할듯'
 });
 Index.getInitialProps =
 /*#__PURE__*/
@@ -13898,11 +13898,12 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
 
         case 5:
           data = _context.sent;
+          console.log(data);
           return _context.abrupt("return", {
             shows: data
           });
 
-        case 7:
+        case 8:
         case "end":
           return _context.stop();
       }
