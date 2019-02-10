@@ -70,7 +70,7 @@ function Main_Left_Layout(props){
 
 
       <div style={Transparent}>
-        <Link href="/todaytodo">
+        <Link href="/todo">
           <a className="today">오늘</a>
         </Link>
         <Link href="/">

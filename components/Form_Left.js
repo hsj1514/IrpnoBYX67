@@ -12,6 +12,9 @@ class Form_Left extends Component {
     this.state = {
       title: '',
       description: '',
+      year: '',
+      month: '',
+      day: '',
     };
   }
 
@@ -23,15 +26,15 @@ class Form_Left extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { title, description } = this.state;
+    const { title, description, year, month, day } = this.state;
 
-    axios.post('http://localhost:5000/add', { title, description })
+    axios.post('http://localhost:5000/add', { title, description, year, month, day })
   .then((result) => {
   });
   }
 
   render() {
-    const { title, description } = this.state;
+    const { title, description, year, month, day } = this.state;
 
     return (
       <form style={Form_Style} onSubmit={this.onSubmit}>
@@ -41,7 +44,7 @@ class Form_Left extends Component {
             name="title"
             value={title}
             onChange={this.onChange.bind(this)}
-          />
+          required/>
         </div>
         <p></p>
         <div>
@@ -50,7 +53,34 @@ class Form_Left extends Component {
             name="description"
             value={description}
             onChange={this.onChange.bind(this)}
-          />
+          required/>
+        </div>
+        <p></p>
+        <div>
+          년도 : <input
+            type="number"
+            name="year"
+            value={year}
+            onChange={this.onChange.bind(this)}
+          required/>
+        </div>
+        <p></p>
+        <div>
+          월 : <input
+            type="number"
+            name="month"
+            value={month}
+            onChange={this.onChange.bind(this)}
+          required/>
+        </div>
+        <p></p>
+        <div>
+          일 : <input
+            type="number"
+            name="day"
+            value={day}
+            onChange={this.onChange.bind(this)}
+          required/>
         </div>
         <p></p>
         <button type="submit">Submit</button>
