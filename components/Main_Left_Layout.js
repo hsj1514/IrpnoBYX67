@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Popup_Left from "../components/Popup_Left.js"
+import Onclick from "../components/onclick.js"
 
 
 
@@ -69,7 +70,7 @@ function Main_Left_Layout(props){
 
       <Popup_Left />
 
-
+      <Onclick />
 
 
       <div style={Transparent}>

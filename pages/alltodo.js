@@ -61,7 +61,7 @@ class AllTodo extends React.Component {
     function sortingTodoId(){
       var i = 1;
       var start = select_After_Nthday_Todo_Id(todos , 0)
-      while(i < 36500){
+      while(i < 365){
         start = start.concat(select_After_Nthday_Todo_Id(todos , i))
         i = i + 1;
       }
@@ -98,11 +98,15 @@ class AllTodo extends React.Component {
           .list:hover {
             background-color : #f2f2f2;
           }
+          div {
+            border : solid 1px;
+          }
         `}</style>
         <div style={{fontSize : '12px', paddingBottom : '5px', color : '#999',}}>{todo.year}/{todo.month}/{todo.day}</div>
         <div>{todo.title}</div>
         <p></p>
         <div style={{fontSize : '13px'}}>-{todo.description}</div>
+        <div></div>
         </li>
     )
 
