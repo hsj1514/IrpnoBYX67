@@ -1,7 +1,14 @@
-
+import App from "../pages/App.js"
 import axios from 'axios';
 
-class SSRTest extends React.Component {
+const Todo_Style = {
+  borderTop : 'groove 1px',
+  padding : '2px',
+  margin : '3px 0px',
+  height : '150px',
+}
+
+class TodayTodo extends React.Component {
     static async getInitialProps ({req}) {
         const response = await axios.get('http://localhost:5000/list');
         console.log(response.data)
@@ -16,15 +23,14 @@ class SSRTest extends React.Component {
         const todoList = todos.map(
             todo =>
 
-            <li style={{width : '300px', height : '150px', border : 'solid 1px',}}>
+            <li style={Todo_Style}>
             <div>{todo.title}</div>
-            <div>ㅈ</div>
             </li>
         )
 
         return (
-
-                <ul style={{listStyleType : 'none',}}>
+          <App>
+                <ul style={{listStyleType : 'none', paddingLeft : '0',}}>
 
                   <div style={{}}>
                     {todoList}
@@ -32,12 +38,13 @@ class SSRTest extends React.Component {
 
 
                 </ul>
+          </App>
 
         );
     }
 }
 
-export default SSRTest;
+export default TodayTodo;
 
 
 

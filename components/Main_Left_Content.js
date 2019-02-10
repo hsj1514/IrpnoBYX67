@@ -6,7 +6,7 @@ const Main_Left_Content_Style = {
 }
 
 
-function Main_Left_Content(props){
+function Main_Left_Content(){
 
   return (
 
@@ -14,7 +14,7 @@ function Main_Left_Content(props){
 
       <div style={Main_Left_Content_Style}>
         <div style={{paddingBottom : '10px', fontSize : '12px',}}>오늘 4월 26일</div>
-        <div>{props.children}</div>
+        <div>카페 가기</div>
       </div>
 
       <div style={Main_Left_Content_Style}>
