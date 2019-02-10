@@ -1,6 +1,3 @@
-import axios from 'axios';
-// import fetch from 'isomorphic-unfetch'
-
 const Main_Left_Content_Style = {
   borderTop : 'groove 1px',
   padding : '2px',
@@ -9,43 +6,15 @@ const Main_Left_Content_Style = {
 }
 
 
-// Main_Left_Content.getInitialProps = async function() {
-//   const res = await fetch('http://localhost:5000/list')
-//   const data = await res.json()
-//   console.log(data)
-//
-//   return {
-//     shows: data
-//   }
-// }
-
-
-
-function Main_Left_Content(){
+function Main_Left_Content(props){
 
   return (
-    axios.get('http://localhost:5000/list')
-      .then(function(response){
-        const title = response.data
-        console.log(title)
-        console.log(title[2].title)
-        // console.log(response)
-        // console.log(title)
-        // console.log(title[2])
-        // console.log(title[2].title)
-        // console.log(title[0])
-        // console.log(title[1])
-        // console.log(title[2])
-        // console.log(title[3])
-
-      }),
-
 
     <div className="content_left">
 
       <div style={Main_Left_Content_Style}>
         <div style={{paddingBottom : '10px', fontSize : '12px',}}>오늘 4월 26일</div>
-        <div>학원 가기</div>
+        <div>{props.children}</div>
       </div>
 
       <div style={Main_Left_Content_Style}>
