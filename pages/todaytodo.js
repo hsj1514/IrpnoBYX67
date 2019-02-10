@@ -72,10 +72,16 @@ class TodayTodo extends React.Component {
             todo =>
 
 
-            <li style={Todo_Style}>
-            <div style={{fontSize : '12px',}}>{todo.year}/{todo.month}/{todo.day}</div>
+            <li style={Todo_Style} className="list">
+            <style jsx>{`
+              .list:hover {
+                background-color : #f2f2f2;
+              }
+            `}</style>
+            <div style={{fontSize : '12px', paddingBottom : '5px', color : '#999',}}>{todo.year}/{todo.month}/{todo.day}</div>
             <div>{todo.title}</div>
-            <div>{todo.description}</div>
+            <p></p>
+            <div style={{fontSize : '13px'}}>-{todo.description}</div>
             </li>
         )
 
@@ -90,7 +96,6 @@ class TodayTodo extends React.Component {
 
                 </ul>
           </App>
-
         );
     }
 }

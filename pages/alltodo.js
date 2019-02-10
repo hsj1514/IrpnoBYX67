@@ -3,8 +3,10 @@ import axios from 'axios';
 
 
 const today = new Date();
+console.log(today)
 
 const date = today.toISOString().substring(0, 10)
+console.log(date)
 
 const year = Number(date.substring(0,4))
 
@@ -20,6 +22,16 @@ const Todo_Style = {
   height : '150px',
 }
 
+//--------------------------------------------
+
+
+
+
+
+
+
+
+//--------------------------------------------
 
 class AllTodo extends React.Component {
     static async getInitialProps ({req}) {
@@ -49,7 +61,7 @@ class AllTodo extends React.Component {
     function sortingTodoId(){
       var i = 1;
       var start = select_After_Nthday_Todo_Id(todos , 0)
-      while(i < 365000){
+      while(i < 36500){
         start = start.concat(select_After_Nthday_Todo_Id(todos , i))
         i = i + 1;
       }
@@ -81,10 +93,16 @@ class AllTodo extends React.Component {
         todo =>
 
 
-        <li style={Todo_Style}>
-        <div style={{fontSize : '12px',}}>{todo.year}/{todo.month}/{todo.day}</div>
+        <li style={Todo_Style} className="list">
+        <style jsx>{`
+          .list:hover {
+            background-color : #f2f2f2;
+          }
+        `}</style>
+        <div style={{fontSize : '12px', paddingBottom : '5px', color : '#999',}}>{todo.year}/{todo.month}/{todo.day}</div>
         <div>{todo.title}</div>
-        <div>{todo.description}</div>
+        <p></p>
+        <div style={{fontSize : '13px'}}>-{todo.description}</div>
         </li>
     )
 

@@ -60,8 +60,8 @@ export default class Popup_Left extends Component {
                 <input className="addTodo" type="button" value="계획 추가하기" onClick={() => this.openModal()} />
                 <Modal
                     visible={this.state.visible}
-                    width="400"
-                    height="300"
+                    width="500"
+                    height="400"
                     effect="fadeInUp"
                     onClickAway={() => this.closeModal()}
                 >

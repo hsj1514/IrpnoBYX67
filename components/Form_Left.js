@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Form_Style = {
   marginLeft : '10px',
-  paddingBottom : '100px',
+  paddingBottom : '70px',
 }
 
 class Form_Left extends Component {
@@ -83,7 +83,7 @@ class Form_Left extends Component {
           required/>
         </div>
         <p></p>
-        <button type="submit">Submit</button>
+        <button type="submit">제출하기</button>
       </form>
     );
   }
