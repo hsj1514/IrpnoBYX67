@@ -13933,6 +13933,14 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+var today = new Date();
+var date = today.toISOString().substring(0, 10);
+var year = Number(date.substring(0, 4));
+console.log(year);
+var month = Number(date.substring(5, 7));
+console.log(month);
+var day = Number(date.substring(8, 10));
+console.log(day);
 var Todo_Style = {
   borderTop: 'groove 1px',
   padding: '2px',
@@ -13954,13 +13962,35 @@ function (_React$Component) {
   _createClass(TodayTodo, [{
     key: "render",
     value: function render() {
-      var todos = this.props.todos;
+      var todos = this.props.todos; //-------------------------------------------
+
+      console.log(todos);
+      console.log(todos[0].day);
+      console.log(todos.length);
+
+      function selectTodayTodoId(todos) {
+        var i = 0;
+        var list = [];
+
+        while (i < todos.length) {
+          if (todos[i].day === day) {
+            list.push(todos[i].id);
+          }
+
+          i = i + 1;
+        }
+
+        return list;
+      }
+
+      console.log(selectTodayTodoId(todos)); //----------------------------------------
+
       var todoList = todos.map(function (todo) {
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
           style: Todo_Style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 77
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -13969,25 +13999,25 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 78
           },
           __self: this
         }, todo.year, "/", todo.month, "/", todo.day), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 79
           },
           __self: this
         }, todo.created[0], todo.created[1], todo.created[2], todo.created[3]), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 80
           },
           __self: this
         }, todo.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30
+            lineNumber: 81
           },
           __self: this
         }, todo.description));
@@ -13995,7 +14025,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_pages_App_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 86
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
@@ -14005,14 +14035,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 87
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         style: {},
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 89
         },
         __self: this
       }, todoList)));
@@ -14034,12 +14064,11 @@ function (_React$Component) {
 
               case 3:
                 response = _context.sent;
-                console.log(response.data);
                 return _context.abrupt("return", {
                   todos: response.data
                 });
 
-              case 6:
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -14107,7 +14136,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*****************************!*\
   !*** multi ./pages/todo.js ***!
   \*****************************/
@@ -14132,5 +14161,5 @@ module.exports = dll_831a3634f66cb1dada0c;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
+},[[3,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=todo.js.map
