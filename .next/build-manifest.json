@@ -11,11 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/todaytodo": [
+    "/seventodo": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/seventodo": [
+    "/todaytodo": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
