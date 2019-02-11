@@ -14,8 +14,6 @@ const Header_Style = {
 }
 
 
-
-
 function Header(){
   return(
     <header className="header" style={Header_Style}>
@@ -68,9 +66,9 @@ function Header(){
       </Link>
 
 
-
     </header>
   )
 }
+
 
 export default Header

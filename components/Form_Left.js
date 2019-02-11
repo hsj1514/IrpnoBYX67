@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 const Form_Style = {
   marginLeft : '10px',
   paddingBottom : '70px',
 }
+
 
 class Form_Left extends Component {
   constructor() {
@@ -53,11 +55,11 @@ class Form_Left extends Component {
             name="description"
             value={description}
             onChange={this.onChange.bind(this)}
-          required/>
+          />
         </div>
         <p></p>
         <div>
-          년도 : <input
+          년도(ex. 2019) : <input
             type="number"
             name="year"
             value={year}
@@ -66,7 +68,7 @@ class Form_Left extends Component {
         </div>
         <p></p>
         <div>
-          월 : <input
+          월(ex. 8) : <input
             type="number"
             name="month"
             value={month}
@@ -75,7 +77,7 @@ class Form_Left extends Component {
         </div>
         <p></p>
         <div>
-          일 : <input
+          일(ex.6) : <input
             type="number"
             name="day"
             value={day}

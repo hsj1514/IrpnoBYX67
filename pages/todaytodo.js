@@ -1,35 +1,33 @@
 import App from "../pages/App.js"
 import axios from 'axios';
-
-
+import Onclick from "../components/onclick.js"
+import Repairbuton from "../components/repairtodo.js"
 
 
 const today = new Date();
 const date = today.toISOString().substring(0, 10)
 
 const year = Number(date.substring(0,4))
-// console.log(year)
+
 
 const month = Number(date.substring(5,7))
-// console.log(month)
+
 
 const day = Number(date.substring(8,10))
-// console.log(day)
-
-
 
 
 const Todo_Style = {
   borderTop : 'groove 1px',
   padding : '2px',
   margin : '3px 0px',
-  height : '150px',
+  height : '250px',
 }
+
 
 class TodayTodo extends React.Component {
     static async getInitialProps ({req}) {
         const response = await axios.get('http://localhost:5000/list');
-        // console.log(response.data)
+
         return {
             todos : response.data
         }
@@ -37,7 +35,6 @@ class TodayTodo extends React.Component {
 
     render() {
         const { todos } = this.props;
-
 
 
         function select_Today_Todo_Id(todos){
@@ -67,7 +64,6 @@ class TodayTodo extends React.Component {
         console.log(today_todo)
 
 
-
         const todoList = today_todo.map(
             todo =>
 
@@ -77,57 +73,34 @@ class TodayTodo extends React.Component {
               .list:hover {
                 background-color : #f2f2f2;
               }
+
+              .remove {
+                margin-left : 90%;
+                margin-bottom : 10px;
+              }
+
             `}</style>
             <div style={{fontSize : '12px', paddingBottom : '5px', color : '#999',}}>{todo.year}/{todo.month}/{todo.day}</div>
             <div>{todo.title}</div>
             <p></p>
             <div style={{fontSize : '13px'}}>-{todo.description}</div>
+            <button className="remove">삭제</button>
+            <Repairbuton />
+            <Onclick />
             </li>
         )
 
         return (
           <App>
                 <ul style={{listStyleType : 'none', paddingLeft : '0',}}>
-
                   <div style={{}}>
                     {todoList}
                   </div>
-
-
                 </ul>
           </App>
         );
     }
 }
 
+
 export default TodayTodo;
-
-
-
-// class SSRTest extends React.Component {
-//     static async getInitialProps ({req}) {
-//         const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-//         console.log(response.data)
-//         return {
-//             users: response.data
-//         }
-//     }
-//
-//     render() {
-//         const { users } = this.props;
-//
-//         const userList = users.map(
-//             user => <li key={user.id}>{user.username}</li>
-//         )
-//
-//         return (
-//             <Layout>
-//                 <ul>
-//                     {userList}
-//                 </ul>
-//             </Layout>
-//         );
-//     }
-// }
-//
-// export default SSRTest;

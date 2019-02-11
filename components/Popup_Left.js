@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 import Form_Left from "../components/Form_Left.js"
 
+
 export default class Popup_Left extends Component {
 
     constructor(props) {

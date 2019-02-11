@@ -25,6 +25,7 @@ class DeleteAll extends React.Component {
     }
 }
 
+
 DeleteAll.getInitialProps = async function() {
   const res = await fetch('http://localhost:5000/delete')
   const data = await res.json()

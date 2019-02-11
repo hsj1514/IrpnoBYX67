@@ -1,20 +1,20 @@
 import axios from 'axios';
 
+
 const BoxStyle = {
   width : '30px',
   height : '30px',
 
 }
 
+
 class Onclick extends React.Component {
   constructor(props) {
       super(props);
-      /* set the initial checkboxState to true */
       this.state = {
         checkboxState: true,
       }
     }
-    /* prevent form submission from reloading the page */
   onSubmit(event) {
       event.preventDefault();
 
@@ -25,7 +25,6 @@ class Onclick extends React.Component {
     });
 
     }
-    /* callback to change the checkboxState to false when the checkbox is checked */
   toggle(event) {
     this.setState({
       checkboxState: !this.state.checkboxState
@@ -43,7 +42,7 @@ class Onclick extends React.Component {
         style={BoxStyle}
         onClick={this.toggle.bind(this)}
         />
-        <label>Checkbox</label>
+
       </span>
     );
 
@@ -60,4 +59,3 @@ class Onclick extends React.Component {
 }
 
 export default Onclick
-// ReactDOM.render(<App />, document.getElementById("root"));

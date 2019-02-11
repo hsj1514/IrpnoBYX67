@@ -1,6 +1,7 @@
 import App from "../pages/App.js"
 import axios from 'axios';
-
+import Onclick from "../components/onclick.js"
+import Repairbuton from "../components/repairtodo.js"
 
 const today = new Date();
 console.log(today)
@@ -19,19 +20,9 @@ const Todo_Style = {
   borderTop : 'groove 1px',
   padding : '2px',
   margin : '3px 0px',
-  height : '150px',
+  height : '250px',
 }
 
-//--------------------------------------------
-
-
-
-
-
-
-
-
-//--------------------------------------------
 
 class SevenTodo extends React.Component {
     static async getInitialProps ({req}) {
@@ -68,9 +59,6 @@ class SevenTodo extends React.Component {
       return start;
     }
 
-    console.log(sortingTodoId())
-
-
 
     function make_Seven_Todo_List(){
       var i = 0;
@@ -83,10 +71,8 @@ class SevenTodo extends React.Component {
     }
 
 
-
     const seven_todo = make_Seven_Todo_List()
     console.log(seven_todo)
-
 
 
     const todoList = seven_todo.map(
@@ -98,13 +84,21 @@ class SevenTodo extends React.Component {
           .list:hover {
             background-color : #f2f2f2;
           }
+
+          .remove {
+            margin-left : 90%;
+            margin-bottom : 10px;
+          }
         `}</style>
         <div style={{fontSize : '12px', paddingBottom : '5px', color : '#999',}}>{todo.year}/{todo.month}/{todo.day}</div>
         <div>{todo.title}</div>
         <p></p>
         <div style={{fontSize : '13px'}}>-{todo.description}</div>
-        <div></div>
+        <button className="remove">삭제</button>
+        <Repairbuton />
+        <Onclick />
         </li>
+
     )
 
       return (
