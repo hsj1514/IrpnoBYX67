@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Modal from 'react-awesome-modal';
+import axios from 'axios';
 
 
 const Header_Style = {
@@ -10,6 +12,8 @@ const Header_Style = {
     minWidth : '600px',
     marginBottom : '20px',
 }
+
+
 
 
 function Header(){
@@ -30,7 +34,7 @@ function Header(){
 
       .achievement {
         font-size : 15px;
-        margin-left : 40%;
+        margin-left : 20%;
         text-decoration : none;
         color : black;
       }
@@ -38,14 +42,33 @@ function Header(){
       .achievement:hover {
         opacity : 0.5;
       }
+
+      .reset {
+        font-size : 15px;
+        margin-left : 40%;
+        text-decoration : none;
+        color : black;
+      }
+
+      .reset:hover {
+        opacity : 0.5;
+      }
     `}</style>
 
       <Link href="/">
         <a className="logo">Todo Application</a>
       </Link>
+
       <Link href="/">
         <a className=" achievement" >완료목록 보기</a>
       </Link>
+
+      <Link href="/deleteall">
+        <a className="reset">계획 초기화</a>
+      </Link>
+
+
+
     </header>
   )
 }

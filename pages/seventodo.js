@@ -33,7 +33,7 @@ const Todo_Style = {
 
 //--------------------------------------------
 
-class AllTodo extends React.Component {
+class SevenTodo extends React.Component {
     static async getInitialProps ({req}) {
         const response = await axios.get('http://localhost:5000/list');
         return {
@@ -61,7 +61,7 @@ class AllTodo extends React.Component {
     function sortingTodoId(){
       var i = 1;
       var start = select_After_Nthday_Todo_Id(todos , 0)
-      while(i < 365){
+      while(i < 8){
         start = start.concat(select_After_Nthday_Todo_Id(todos , i))
         i = i + 1;
       }
@@ -72,7 +72,7 @@ class AllTodo extends React.Component {
 
 
 
-    function make_All_Todo_List(){
+    function make_Seven_Todo_List(){
       var i = 0;
       var todo = [];
       while(i < sortingTodoId().length){
@@ -84,12 +84,12 @@ class AllTodo extends React.Component {
 
 
 
-    const all_todo = make_All_Todo_List()
-    console.log(all_todo)
+    const seven_todo = make_Seven_Todo_List()
+    console.log(seven_todo)
 
 
 
-    const todoList = all_todo.map(
+    const todoList = seven_todo.map(
         todo =>
 
 
@@ -97,9 +97,6 @@ class AllTodo extends React.Component {
         <style jsx>{`
           .list:hover {
             background-color : #f2f2f2;
-          }
-          div {
-            border : solid 1px;
           }
         `}</style>
         <div style={{fontSize : '12px', paddingBottom : '5px', color : '#999',}}>{todo.year}/{todo.month}/{todo.day}</div>
@@ -113,18 +110,14 @@ class AllTodo extends React.Component {
       return (
         <App>
               <ul style={{listStyleType : 'none', paddingLeft : '0',}}>
-
                 <div style={{}}>
                   {todoList}
                 </div>
-
-
               </ul>
         </App>
-
       );
     }
 }
 
 
-export default AllTodo;
+export default SevenTodo;

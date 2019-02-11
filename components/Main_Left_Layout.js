@@ -77,8 +77,8 @@ function Main_Left_Layout(props){
         <Link href="/todaytodo">
           <a className="today">오늘</a>
         </Link>
-        <Link href="/alltodo">
-          <a className="sevendays">전체보기</a>
+        <Link href="/seventodo">
+          <a className="sevendays">7일의 계획</a>
         </Link>
       </div>
 
