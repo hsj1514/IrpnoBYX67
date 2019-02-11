@@ -20,6 +20,7 @@ class Form_Add extends Component {
     };
   }
 
+
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
     console.log(e.target.name);
@@ -28,11 +29,14 @@ class Form_Add extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
+
     const { title, description, year, month, day } = this.state;
 
+    console.log(this.state)
+
     axios.post('http://localhost:5000/add', { title, description, year, month, day })
-  .then((result) => {
-  });
+  // .then((result) => {
+  // });
   }
 
   render() {

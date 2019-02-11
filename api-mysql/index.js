@@ -8,6 +8,12 @@ var app = express();
 
 app.set('port', process.env.PORT || 5000);
 
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
+  res.header("Access-Control-Allow-Methods", "POST");
+  next();
+});
 
 app.use(bodyParser.json());
 
@@ -19,9 +25,6 @@ app.get('/', function(req, res){
 
 app.get('/list', function(req, res){
 
-  res.header("Access-Control-Allow-Origin" , "*");
-  res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
-
   connection.query('SELECT * from todo', function(err, rows) {
     if(err) throw err;
 
@@ -32,9 +35,6 @@ app.get('/list', function(req, res){
 
 
 app.get('/list_title', function(req, res){
-
-  res.header("Access-Control-Allow-Origin" , "*");
-  res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
 
   connection.query('SELECT title from todo', function(err, rows) {
     if(err) throw err;
@@ -48,9 +48,6 @@ app.get('/list_title', function(req, res){
 
 app.get('/list_description', function(req, res){
 
-  res.header("Access-Control-Allow-Origin" , "*");
-  res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
-
   connection.query('SELECT description from todo', function(err, rows) {
     if(err) throw err;
 
@@ -62,10 +59,6 @@ app.get('/list_description', function(req, res){
 
 
 app.post('/add', function (req, res) {
-
-  res.header("Access-Control-Allow-Origin" , "*");
-  res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
-  res.header("Access-Control-Allow-Methods" , "POST");
 
   const title=req.body.title;
   const description=req.body.description;
@@ -91,10 +84,6 @@ app.post('/add', function (req, res) {
 
 app.put('/check', function (req, res) {
 
-  res.header("Access-Control-Allow-Origin" , "*");
-  res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
-  res.header("Access-Control-Allow-Methods" , "PUT")
-
   const check = req.body.checkboxState;
 
 
@@ -109,9 +98,6 @@ app.put('/check', function (req, res) {
 
 
 app.get('/delete', function (req, res) {
-
-  res.header("Access-Control-Allow-Origin" , "*");
-  res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
 
   connection.query(`DELETE FROM todo` , function(err,rows) {
     if(err) throw err;
