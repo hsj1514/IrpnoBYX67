@@ -64,7 +64,7 @@ export default class RemoveButton extends Component {
                     onClickAway={() => this.closeModal()}
                 >
                     <div>
-                        <h1 className="title">계획 수정하기</h1>
+                        <h1 className="title">정말 삭제하시겠습니까?</h1>
                         <Form_Remove />
                         <a className="close" href="javascript:void(0);" onClick={() => this.closeModal()}>닫기</a>
                     </div>
