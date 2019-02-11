@@ -68,7 +68,7 @@ class TodayTodo extends React.Component {
             todo =>
 
 
-            <li style={Todo_Style} className="list">
+            <li style={Todo_Style} className="list" key={todo.id}>
             <style jsx>{`
               .list:hover {
                 background-color : #f2f2f2;

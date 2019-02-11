@@ -33,7 +33,7 @@ class Onclick extends React.Component {
   render() {
     const checkedOrNot = [];
     checkedOrNot.push(
-      <p>{this.state.checkboxState ? '미완료' : '완료!'}</p>
+      <p key={checkedOrNot}>{this.state.checkboxState ? '미완료' : '완료!'}</p>
     );
     const checkbox = (
       <span>
