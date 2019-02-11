@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
-import Form_Left from "../components/Form_Left.js"
+import Form_Add from "../components/Form_Add.js"
 
 
 export default class Popup_Left extends Component {
@@ -68,7 +68,7 @@ export default class Popup_Left extends Component {
                 >
                     <div>
                         <h1 className="title">계획 추가하기</h1>
-                        <Form_Left />
+                        <Form_Add />
                         <a className="close" href="javascript:void(0);" onClick={() => this.closeModal()}>닫기</a>
                     </div>
                 </Modal>

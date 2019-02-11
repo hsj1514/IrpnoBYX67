@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
-import Form_Left from "../components/Form_Left.js"
+import Form_Remove from "../components/Form_Remove.js"
 
 
-export default class RepairButon extends Component {
+export default class RemoveButton extends Component {
 
     constructor(props) {
         super(props);
@@ -55,7 +55,7 @@ export default class RepairButon extends Component {
                 color : red;
               }
               `}</style>
-                <input className="addTodo" type="button" value="수정" onClick={() => this.openModal()} />
+                <input className="addTodo" type="button" value="삭제" onClick={() => this.openModal()} />
                 <Modal
                     visible={this.state.visible}
                     width="500"
@@ -65,7 +65,7 @@ export default class RepairButon extends Component {
                 >
                     <div>
                         <h1 className="title">계획 수정하기</h1>
-                        <Form_Left />
+                        <Form_Remove />
                         <a className="close" href="javascript:void(0);" onClick={() => this.closeModal()}>닫기</a>
                     </div>
                 </Modal>

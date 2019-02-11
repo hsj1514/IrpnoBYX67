@@ -8,7 +8,7 @@ const Form_Style = {
 }
 
 
-class Form_Left extends Component {
+class Form_Add extends Component {
   constructor() {
     super();
     this.state = {
@@ -92,4 +92,4 @@ class Form_Left extends Component {
 }
 
 
-export default Form_Left
+export default Form_Add

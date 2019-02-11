@@ -65,6 +65,7 @@ app.post('/add', function (req, res) {
 
   res.header("Access-Control-Allow-Origin" , "*");
   res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
+  res.header("Access-Control-Allow-Methods" , "POST");
 
   const title=req.body.title;
   const description=req.body.description;
@@ -77,7 +78,7 @@ app.post('/add', function (req, res) {
   console.log(month)
   console.log(day)
 
-  connection.query(`INSERT INTO todo (title , description , year , month , day , created) VALUES (? , ? , ? , ? , ? , NOW())` , [title , description , year , month , day] , function(err,rows) {
+  connection.query(`INSERT INTO todo (title , description , year , month , day , checkboxState , created) VALUES (? , ? , ? , ? , ? , 'false' , NOW())` , [title , description , year , month , day] , function(err,rows) {
     if(err) throw err;
 
     console.log('post success ', rows);
@@ -87,10 +88,12 @@ app.post('/add', function (req, res) {
 })
 
 
+
 app.put('/check', function (req, res) {
 
   res.header("Access-Control-Allow-Origin" , "*");
   res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
+  res.header("Access-Control-Allow-Methods" , "PUT")
 
   const check = req.body.checkboxState;
 
