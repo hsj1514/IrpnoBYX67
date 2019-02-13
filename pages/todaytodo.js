@@ -60,6 +60,14 @@ class TodayTodo extends React.Component {
           return todo;
         }
 
+        function Click(){
+
+          console.log({id:this.id})
+
+          const id = {id : this.id}
+          axios.post('http://localhost:5000/delete',  id )
+        }
+
 
         const today_todo = make_Today_Todo_List()
         console.log(today_todo)
@@ -85,6 +93,7 @@ class TodayTodo extends React.Component {
             <div>{todo.title}</div>
             <p></p>
             <div style={{fontSize : '13px'}}>-{todo.description}</div>
+            <button onClick={Click.bind(todo)}>삭제</button>
             <RemoveButton />
             <RepairButton />
             <Onclick />

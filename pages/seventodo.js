@@ -33,9 +33,28 @@ class SevenTodo extends React.Component {
         }
     }
 
+
     render() {
 
         const { todos } = this.props;
+
+
+
+    function month_Day_Calculator(month){
+      if(month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12){
+        return 31
+      } else if(month === 2){
+        return 29
+      } else {
+        return 30
+      }
+    }
+
+    console.log(month_Day_Calculator(month))
+
+    console.log(todos)
+
+
 
 
     function select_After_Nthday_Todo_Id(todos , n){
