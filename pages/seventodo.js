@@ -71,6 +71,12 @@ class SevenTodo extends React.Component {
       return todo;
     }
 
+    function Click(){
+      console.log(this.id)
+    }
+
+    // const ab = []
+
 
     const seven_todo = make_Seven_Todo_List()
     console.log(seven_todo)
@@ -78,6 +84,7 @@ class SevenTodo extends React.Component {
 
     const todoList = seven_todo.map(
         todo =>
+
 
 
         <li style={Todo_Style} className="list" key={todo.id}>
@@ -95,6 +102,7 @@ class SevenTodo extends React.Component {
         <div>{todo.title}</div>
         <p></p>
         <div style={{fontSize : '13px'}}>-{todo.description}</div>
+        <button onClick={Click.bind(todo)}>삭제</button>
         <RemoveButton />
         <RepairButton />
         <Onclick />

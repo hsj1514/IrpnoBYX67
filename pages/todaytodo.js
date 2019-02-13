@@ -2,6 +2,7 @@ import App from "../pages/App.js"
 import axios from 'axios';
 import Onclick from "../components/onclick.js"
 import RepairButton from "../components/repairbutton.js"
+import RemoveButton from "../components/removebutton.js"
 
 
 const today = new Date();
@@ -84,7 +85,7 @@ class TodayTodo extends React.Component {
             <div>{todo.title}</div>
             <p></p>
             <div style={{fontSize : '13px'}}>-{todo.description}</div>
-            <button className="remove">삭제</button>
+            <RemoveButton />
             <RepairButton />
             <Onclick />
             </li>
