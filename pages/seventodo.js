@@ -44,7 +44,7 @@ class SevenTodo extends React.Component {
       }
     }
 
-
+// 해당 월의 계획들을 찾아내기 위한 함수
     function select_After_Nthday_Todo_Id(todos , month , n  , day){
       var i = 0;
       var list = [];
@@ -61,7 +61,7 @@ class SevenTodo extends React.Component {
       return list;
     }
 
-
+// 해당 월의 다음 달 계획들을 찾아내기 위한 함수
     function new_select_After_Nthday_Todo_Id(todos , month , n  , day){
       var i = 0;
       var list = [];
@@ -78,7 +78,7 @@ class SevenTodo extends React.Component {
       return list;
     }
 
-
+// 7일의 계획들을 날짜순으로 나열한 후 id값을 출력
     function sortingTodoId(){
 
       if(day + 7 > month_Day_Calculator(month)){
@@ -109,7 +109,7 @@ class SevenTodo extends React.Component {
       }
     }
 
-
+//sortingTodo를 통해 출력한 id를 이용하여 todo list 만들기
     function make_Seven_Todo_List(){
       var i = 0;
       var todo = [];
