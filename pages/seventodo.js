@@ -34,6 +34,7 @@ class SevenTodo extends React.Component {
     }
 
     render() {
+
         const { todos } = this.props;
 
 
@@ -72,10 +73,13 @@ class SevenTodo extends React.Component {
     }
 
     function Click(){
-      console.log(this.id)
+
+      console.log({id:this.id})
+
+      const id = {id : this.id}
+      axios.post('http://localhost:5000/delete',  id )
     }
 
-    // const ab = []
 
 
     const seven_todo = make_Seven_Todo_List()
@@ -87,7 +91,7 @@ class SevenTodo extends React.Component {
 
 
 
-        <li style={Todo_Style} className="list" key={todo.id}>
+        <li style={Todo_Style} className="list" key={todo.toString()}>
         <style jsx>{`
           .list:hover {
             background-color : #f2f2f2;

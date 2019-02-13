@@ -11,7 +11,7 @@ app.set('port', process.env.PORT || 5000);
 app.all('/*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers" , "Origin, X-Requested-With, Content-Type , Accept , Authorization");
-  res.header("Access-Control-Allow-Methods", "POST");
+  res.header("Access-Control-Allow-Methods", "POST , PUT , DELETE");
   next();
 });
 
@@ -97,7 +97,7 @@ app.put('/check', function (req, res) {
 })
 
 
-app.get('/delete', function (req, res) {
+app.get('/deleteall', function (req, res) {
 
   connection.query(`DELETE FROM todo` , function(err,rows) {
     if(err) throw err;
@@ -108,6 +108,24 @@ app.get('/delete', function (req, res) {
 
   });
 })
+
+
+app.post('/delete', function (req, res) {
+
+  const id = req.body.id
+
+  console.log(req.body.id)
+
+  connection.query(`DELETE FROM todo WHERE id= ? ` , [id] , function(err,rows) {
+    if(err) throw err;
+
+    console.log('delete success ', rows);
+    res.send(rows);
+    return
+  })
+})
+
+
 
 
 app.listen(app.get('port'), function () {
