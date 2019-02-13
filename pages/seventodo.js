@@ -5,18 +5,14 @@ import RepairButton from "../components/repairbutton.js"
 import RemoveButton from "../components/removebutton.js"
 
 const today = new Date();
-console.log(today)
 
 const date = today.toISOString().substring(0, 10)
-console.log(date)
 
 const year = Number(date.substring(0,4))
 
 const month = Number(date.substring(5,7))
 
-const day = Number(date.substring(8,10)) + 15
-console.log(day)
-
+const day = Number(date.substring(8,10))
 
 const Todo_Style = {
   borderTop : 'groove 1px',
@@ -34,12 +30,9 @@ class SevenTodo extends React.Component {
         }
     }
 
-
     render() {
 
         const { todos } = this.props;
-
-
 
     function month_Day_Calculator(month){
       if(month === 1 || month === 3 || month === 5 || month === 7 || month === 8 || month === 10 || month === 12){
@@ -50,8 +43,6 @@ class SevenTodo extends React.Component {
         return 30
       }
     }
-
-    console.log(month_Day_Calculator(month))
 
 
     function select_After_Nthday_Todo_Id(todos , month , n  , day){
@@ -92,7 +83,6 @@ class SevenTodo extends React.Component {
 
       if(day + 7 > month_Day_Calculator(month)){
 
-
         var i = 1;
         var start = select_After_Nthday_Todo_Id(todos , month , 0 , day)
 
@@ -101,24 +91,14 @@ class SevenTodo extends React.Component {
           i = i + 1;
         }
 
-
-
         var a = 1;
         while(a < 7 - month_Day_Calculator(month) + day + 1){
           start = start.concat(new_select_After_Nthday_Todo_Id(todos , month  , a-1 , 1))
-          console.log(select_After_Nthday_Todo_Id(todos , month+1 , a-1 , 1))
           console.log(start)
-
-
           a = a + 1;
-
-
         }
-
         return start;
-
       } else{
-
         var i = 1;
         var start = select_After_Nthday_Todo_Id(todos , month , 0 , day)
         while(i < 8){
@@ -127,7 +107,6 @@ class SevenTodo extends React.Component {
         }
         return start;
       }
-
     }
 
 
@@ -141,24 +120,19 @@ class SevenTodo extends React.Component {
       return todo;
     }
 
+
     function Click(){
-
       console.log({id:this.id})
-
       const id = {id : this.id}
       axios.post('http://localhost:5000/delete',  id )
     }
 
 
-
     const seven_todo = make_Seven_Todo_List()
     console.log(seven_todo)
 
-
     const todoList = seven_todo.map(
         todo =>
-
-
 
         <li style={Todo_Style} className="list" key={todo.id}>
         <style jsx>{`
@@ -170,17 +144,28 @@ class SevenTodo extends React.Component {
             margin-left : 90%;
             margin-bottom : 10px;
           }
+
+          .removebutton {
+            width : 50px;
+            color : black;
+            font-size : 12px;
+            padding : 5px;
+            margin-left : 90%;
+            margin-right : 20px;
+            display : flex;
+            flex-direction : column;
+            align-items : center;
+          }
         `}</style>
         <div style={{fontSize : '12px', paddingBottom : '5px', color : '#999',}}>{todo.year}/{todo.month}/{todo.day}</div>
         <div>{todo.title}</div>
         <p></p>
         <div style={{fontSize : '13px'}}>-{todo.description}</div>
-        <button onClick={Click.bind(todo)}>삭제</button>
-        <RemoveButton />
+        <button className="removebutton" onClick={Click.bind(todo)}>삭제</button>
+        <p></p>
         <RepairButton />
         <Onclick />
         </li>
-
     )
 
       return (

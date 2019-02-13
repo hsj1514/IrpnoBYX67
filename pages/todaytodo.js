@@ -6,16 +6,14 @@ import RemoveButton from "../components/removebutton.js"
 
 
 const today = new Date();
+
 const date = today.toISOString().substring(0, 10)
 
 const year = Number(date.substring(0,4))
 
-
 const month = Number(date.substring(5,7))
 
-
 const day = Number(date.substring(8,10))
-
 
 const Todo_Style = {
   borderTop : 'groove 1px',
@@ -36,7 +34,6 @@ class TodayTodo extends React.Component {
 
     render() {
         const { todos } = this.props;
-
 
         function select_Today_Todo_Id(todos){
           var i = 0;
@@ -61,9 +58,6 @@ class TodayTodo extends React.Component {
         }
 
         function Click(){
-
-          console.log({id:this.id})
-
           const id = {id : this.id}
           axios.post('http://localhost:5000/delete',  id )
         }
@@ -76,7 +70,6 @@ class TodayTodo extends React.Component {
         const todoList = today_todo.map(
             todo =>
 
-
             <li style={Todo_Style} className="list" key={todo.id}>
             <style jsx>{`
               .list:hover {
@@ -88,13 +81,24 @@ class TodayTodo extends React.Component {
                 margin-bottom : 10px;
               }
 
+              .removebutton {
+                width : 50px;
+                color : black;
+                font-size : 12px;
+                padding : 5px;
+                margin-left : 90%;
+                margin-right : 20px;
+                display : flex;
+                flex-direction : column;
+                align-items : center;
+              }
             `}</style>
             <div style={{fontSize : '12px', paddingBottom : '5px', color : '#999',}}>{todo.year}/{todo.month}/{todo.day}</div>
             <div>{todo.title}</div>
             <p></p>
             <div style={{fontSize : '13px'}}>-{todo.description}</div>
-            <button onClick={Click.bind(todo)}>삭제</button>
-            <RemoveButton />
+            <button className="removebutton" onClick={Click.bind(todo)}>삭제</button>
+            <p></p>
             <RepairButton />
             <Onclick />
             </li>

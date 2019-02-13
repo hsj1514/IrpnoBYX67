@@ -168,8 +168,7 @@ function (_Component) {
         year: year,
         month: month,
         day: day
-      }); // .then((result) => {
-      // });
+      });
     });
 
     _this.state = {
@@ -196,13 +195,13 @@ function (_Component) {
         onSubmit: this.onSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 45
         },
         __self: this
       }, "\uACC4\uD68D : ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -213,19 +212,19 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 46
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 53
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 54
         },
         __self: this
       }, "\uACC4\uD68D \uC124\uBA85(\uC0DD\uB7B5\uAC00\uB2A5) : ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -235,19 +234,19 @@ function (_Component) {
         onChange: this.onChange.bind(this),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 55
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 62
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 63
         },
         __self: this
       }, "\uB144\uB3C4(ex. 2019) : ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -258,19 +257,19 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 64
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 71
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 72
         },
         __self: this
       }, "\uC6D4(ex. 8) : ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -281,19 +280,19 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 73
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 80
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 81
         },
         __self: this
       }, "\uC77C(ex.6) : ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -304,20 +303,20 @@ function (_Component) {
         required: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 82
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 89
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 90
         },
         __self: this
       }, "\uC81C\uCD9C\uD558\uAE30"));
@@ -1653,9 +1652,6 @@ function (_React$Component) {
       }
 
       function Click() {
-        console.log({
-          id: this.id
-        });
         var id = {
           id: this.id
         };
@@ -1668,15 +1664,15 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
           style: Todo_Style,
           key: todo.id,
-          className: "jsx-625304133" + " " + "list",
+          className: "jsx-745493353" + " " + "list",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 80
+            lineNumber: 73
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-          styleId: "625304133",
-          css: ".list.jsx-625304133:hover{background-color :#f2f2f2;}.remove.jsx-625304133{margin-left :90%;margin-bottom :10px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xc7Iq57KO8XFxEZXNrdG9wXFxuZXh0anNcXHBhZ2VzXFx0b2RheXRvZG8uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBZ0Z3QixBQUcyQyxBQUlULGlCQUNHLFNBSnRCLFdBS0EiLCJmaWxlIjoiQzpcXFVzZXJzXFzsirnso7xcXERlc2t0b3BcXG5leHRqc1xccGFnZXNcXHRvZGF5dG9kby5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBBcHAgZnJvbSBcIi4uL3BhZ2VzL0FwcC5qc1wiXHJcbmltcG9ydCBheGlvcyBmcm9tICdheGlvcyc7XHJcbmltcG9ydCBPbmNsaWNrIGZyb20gXCIuLi9jb21wb25lbnRzL29uY2xpY2suanNcIlxyXG5pbXBvcnQgUmVwYWlyQnV0dG9uIGZyb20gXCIuLi9jb21wb25lbnRzL3JlcGFpcmJ1dHRvbi5qc1wiXHJcbmltcG9ydCBSZW1vdmVCdXR0b24gZnJvbSBcIi4uL2NvbXBvbmVudHMvcmVtb3ZlYnV0dG9uLmpzXCJcclxuXHJcblxyXG5jb25zdCB0b2RheSA9IG5ldyBEYXRlKCk7XHJcbmNvbnN0IGRhdGUgPSB0b2RheS50b0lTT1N0cmluZygpLnN1YnN0cmluZygwLCAxMClcclxuXHJcbmNvbnN0IHllYXIgPSBOdW1iZXIoZGF0ZS5zdWJzdHJpbmcoMCw0KSlcclxuXHJcblxyXG5jb25zdCBtb250aCA9IE51bWJlcihkYXRlLnN1YnN0cmluZyg1LDcpKVxyXG5cclxuXHJcbmNvbnN0IGRheSA9IE51bWJlcihkYXRlLnN1YnN0cmluZyg4LDEwKSlcclxuXHJcblxyXG5jb25zdCBUb2RvX1N0eWxlID0ge1xyXG4gIGJvcmRlclRvcCA6ICdncm9vdmUgMXB4JyxcclxuICBwYWRkaW5nIDogJzJweCcsXHJcbiAgbWFyZ2luIDogJzNweCAwcHgnLFxyXG4gIGhlaWdodCA6ICcyNTBweCcsXHJcbn1cclxuXHJcblxyXG5jbGFzcyBUb2RheVRvZG8gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgc3RhdGljIGFzeW5jIGdldEluaXRpYWxQcm9wcyAoe3JlcX0pIHtcclxuICAgICAgICBjb25zdCByZXNwb25zZSA9IGF3YWl0IGF4aW9zLmdldCgnaHR0cDovL2xvY2FsaG9zdDo1MDAwL2xpc3QnKTtcclxuXHJcbiAgICAgICAgcmV0dXJuIHtcclxuICAgICAgICAgICAgdG9kb3MgOiByZXNwb25zZS5kYXRhXHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBjb25zdCB7IHRvZG9zIH0gPSB0aGlzLnByb3BzO1xyXG5cclxuXHJcbiAgICAgICAgZnVuY3Rpb24gc2VsZWN0X1RvZGF5X1RvZG9fSWQodG9kb3Mpe1xyXG4gICAgICAgICAgdmFyIGkgPSAwO1xyXG4gICAgICAgICAgdmFyIGxpc3QgPSBbXTtcclxuICAgICAgICAgIHdoaWxlKGkgPCB0b2Rvcy5sZW5ndGgpe1xyXG4gICAgICAgICAgICBpZih0b2Rvc1tpXS5kYXkgPT09IGRheSl7XHJcbiAgICAgICAgICAgICAgbGlzdC5wdXNoKHRvZG9zW2ldLmlkKVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIGkgPSBpICsgMTtcclxuICAgICAgICAgIH1cclxuICAgICAgICAgIHJldHVybiBsaXN0O1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgZnVuY3Rpb24gbWFrZV9Ub2RheV9Ub2RvX0xpc3QoKXtcclxuICAgICAgICAgIHZhciBpID0gMDtcclxuICAgICAgICAgIHZhciB0b2RvID0gW107XHJcbiAgICAgICAgICB3aGlsZShpIDwgc2VsZWN0X1RvZGF5X1RvZG9fSWQodG9kb3MpLmxlbmd0aCl7XHJcbiAgICAgICAgICAgIHRvZG8ucHVzaCh0b2Rvc1tzZWxlY3RfVG9kYXlfVG9kb19JZCh0b2RvcylbaV0tMV0pO1xyXG4gICAgICAgICAgICBpID0gaSArIDE7XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICByZXR1cm4gdG9kbztcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGZ1bmN0aW9uIENsaWNrKCl7XHJcblxyXG4gICAgICAgICAgY29uc29sZS5sb2coe2lkOnRoaXMuaWR9KVxyXG5cclxuICAgICAgICAgIGNvbnN0IGlkID0ge2lkIDogdGhpcy5pZH1cclxuICAgICAgICAgIGF4aW9zLnBvc3QoJ2h0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9kZWxldGUnLCAgaWQgKVxyXG4gICAgICAgIH1cclxuXHJcblxyXG4gICAgICAgIGNvbnN0IHRvZGF5X3RvZG8gPSBtYWtlX1RvZGF5X1RvZG9fTGlzdCgpXHJcbiAgICAgICAgY29uc29sZS5sb2codG9kYXlfdG9kbylcclxuXHJcblxyXG4gICAgICAgIGNvbnN0IHRvZG9MaXN0ID0gdG9kYXlfdG9kby5tYXAoXHJcbiAgICAgICAgICAgIHRvZG8gPT5cclxuXHJcblxyXG4gICAgICAgICAgICA8bGkgc3R5bGU9e1RvZG9fU3R5bGV9IGNsYXNzTmFtZT1cImxpc3RcIiBrZXk9e3RvZG8uaWR9PlxyXG4gICAgICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICAgICAgLmxpc3Q6aG92ZXIge1xyXG4gICAgICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvciA6ICNmMmYyZjI7XHJcbiAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAucmVtb3ZlIHtcclxuICAgICAgICAgICAgICAgIG1hcmdpbi1sZWZ0IDogOTAlO1xyXG4gICAgICAgICAgICAgICAgbWFyZ2luLWJvdHRvbSA6IDEwcHg7XHJcbiAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgYH08L3N0eWxlPlxyXG4gICAgICAgICAgICA8ZGl2IHN0eWxlPXt7Zm9udFNpemUgOiAnMTJweCcsIHBhZGRpbmdCb3R0b20gOiAnNXB4JywgY29sb3IgOiAnIzk5OScsfX0+e3RvZG8ueWVhcn0ve3RvZG8ubW9udGh9L3t0b2RvLmRheX08L2Rpdj5cclxuICAgICAgICAgICAgPGRpdj57dG9kby50aXRsZX08L2Rpdj5cclxuICAgICAgICAgICAgPHA+PC9wPlxyXG4gICAgICAgICAgICA8ZGl2IHN0eWxlPXt7Zm9udFNpemUgOiAnMTNweCd9fT4te3RvZG8uZGVzY3JpcHRpb259PC9kaXY+XHJcbiAgICAgICAgICAgIDxidXR0b24gb25DbGljaz17Q2xpY2suYmluZCh0b2RvKX0+7IKt7KCcPC9idXR0b24+XHJcbiAgICAgICAgICAgIDxSZW1vdmVCdXR0b24gLz5cclxuICAgICAgICAgICAgPFJlcGFpckJ1dHRvbiAvPlxyXG4gICAgICAgICAgICA8T25jbGljayAvPlxyXG4gICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgIClcclxuXHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgIDxBcHA+XHJcbiAgICAgICAgICAgICAgICA8dWwgc3R5bGU9e3tsaXN0U3R5bGVUeXBlIDogJ25vbmUnLCBwYWRkaW5nTGVmdCA6ICcwJyx9fT5cclxuICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17e319PlxyXG4gICAgICAgICAgICAgICAgICAgIHt0b2RvTGlzdH1cclxuICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICA8L3VsPlxyXG4gICAgICAgICAgPC9BcHA+XHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufVxyXG5cclxuXHJcbmV4cG9ydCBkZWZhdWx0IFRvZGF5VG9kbztcclxuIl19 */\n/*@ sourceURL=C:\\Users\\\uC2B9\uC8FC\\Desktop\\nextjs\\pages\\todaytodo.js */",
+          styleId: "745493353",
+          css: ".list.jsx-745493353:hover{background-color :#f2f2f2;}.remove.jsx-745493353{margin-left :90%;margin-bottom :10px;}.removebutton.jsx-745493353{width :50px;color :black;font-size :12px;padding :5px;margin-left :90%;margin-right :20px;display :-webkit-box;display :-webkit-flex;display :-ms-flexbox;display :flex;-webkit-flex-direction :column;-ms-flex-direction :column;flex-direction :column;-webkit-align-items :center;-webkit-box-align :center;-ms-flex-align :center;align-items :center;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xc7Iq57KO8XFxEZXNrdG9wXFxuZXh0anNcXHBhZ2VzXFx0b2RheXRvZG8uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBeUV3QixBQUcyQyxBQUlULEFBS0wsWUFDQyxLQUxPLFFBTUosQ0FWbEIsV0FLQSxJQU1lLGFBQ0ksaUJBQ0UsbUJBQ0wsOEVBQ1MsaUZBQ0gsaUdBQ3RCIiwiZmlsZSI6IkM6XFxVc2Vyc1xc7Iq57KO8XFxEZXNrdG9wXFxuZXh0anNcXHBhZ2VzXFx0b2RheXRvZG8uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQXBwIGZyb20gXCIuLi9wYWdlcy9BcHAuanNcIlxyXG5pbXBvcnQgYXhpb3MgZnJvbSAnYXhpb3MnO1xyXG5pbXBvcnQgT25jbGljayBmcm9tIFwiLi4vY29tcG9uZW50cy9vbmNsaWNrLmpzXCJcclxuaW1wb3J0IFJlcGFpckJ1dHRvbiBmcm9tIFwiLi4vY29tcG9uZW50cy9yZXBhaXJidXR0b24uanNcIlxyXG5pbXBvcnQgUmVtb3ZlQnV0dG9uIGZyb20gXCIuLi9jb21wb25lbnRzL3JlbW92ZWJ1dHRvbi5qc1wiXHJcblxyXG5cclxuY29uc3QgdG9kYXkgPSBuZXcgRGF0ZSgpO1xyXG5cclxuY29uc3QgZGF0ZSA9IHRvZGF5LnRvSVNPU3RyaW5nKCkuc3Vic3RyaW5nKDAsIDEwKVxyXG5cclxuY29uc3QgeWVhciA9IE51bWJlcihkYXRlLnN1YnN0cmluZygwLDQpKVxyXG5cclxuY29uc3QgbW9udGggPSBOdW1iZXIoZGF0ZS5zdWJzdHJpbmcoNSw3KSlcclxuXHJcbmNvbnN0IGRheSA9IE51bWJlcihkYXRlLnN1YnN0cmluZyg4LDEwKSlcclxuXHJcbmNvbnN0IFRvZG9fU3R5bGUgPSB7XHJcbiAgYm9yZGVyVG9wIDogJ2dyb292ZSAxcHgnLFxyXG4gIHBhZGRpbmcgOiAnMnB4JyxcclxuICBtYXJnaW4gOiAnM3B4IDBweCcsXHJcbiAgaGVpZ2h0IDogJzI1MHB4JyxcclxufVxyXG5cclxuXHJcbmNsYXNzIFRvZGF5VG9kbyBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XHJcbiAgICBzdGF0aWMgYXN5bmMgZ2V0SW5pdGlhbFByb3BzICh7cmVxfSkge1xyXG4gICAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgYXhpb3MuZ2V0KCdodHRwOi8vbG9jYWxob3N0OjUwMDAvbGlzdCcpO1xyXG5cclxuICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICB0b2RvcyA6IHJlc3BvbnNlLmRhdGFcclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIGNvbnN0IHsgdG9kb3MgfSA9IHRoaXMucHJvcHM7XHJcblxyXG4gICAgICAgIGZ1bmN0aW9uIHNlbGVjdF9Ub2RheV9Ub2RvX0lkKHRvZG9zKXtcclxuICAgICAgICAgIHZhciBpID0gMDtcclxuICAgICAgICAgIHZhciBsaXN0ID0gW107XHJcbiAgICAgICAgICB3aGlsZShpIDwgdG9kb3MubGVuZ3RoKXtcclxuICAgICAgICAgICAgaWYodG9kb3NbaV0uZGF5ID09PSBkYXkpe1xyXG4gICAgICAgICAgICAgIGxpc3QucHVzaCh0b2Rvc1tpXS5pZClcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICBpID0gaSArIDE7XHJcbiAgICAgICAgICB9XHJcbiAgICAgICAgICByZXR1cm4gbGlzdDtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGZ1bmN0aW9uIG1ha2VfVG9kYXlfVG9kb19MaXN0KCl7XHJcbiAgICAgICAgICB2YXIgaSA9IDA7XHJcbiAgICAgICAgICB2YXIgdG9kbyA9IFtdO1xyXG4gICAgICAgICAgd2hpbGUoaSA8IHNlbGVjdF9Ub2RheV9Ub2RvX0lkKHRvZG9zKS5sZW5ndGgpe1xyXG4gICAgICAgICAgICB0b2RvLnB1c2godG9kb3Nbc2VsZWN0X1RvZGF5X1RvZG9fSWQodG9kb3MpW2ldLTFdKTtcclxuICAgICAgICAgICAgaSA9IGkgKyAxO1xyXG4gICAgICAgICAgfVxyXG4gICAgICAgICAgcmV0dXJuIHRvZG87XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBmdW5jdGlvbiBDbGljaygpe1xyXG4gICAgICAgICAgY29uc3QgaWQgPSB7aWQgOiB0aGlzLmlkfVxyXG4gICAgICAgICAgYXhpb3MucG9zdCgnaHR0cDovL2xvY2FsaG9zdDo1MDAwL2RlbGV0ZScsICBpZCApXHJcbiAgICAgICAgfVxyXG5cclxuXHJcbiAgICAgICAgY29uc3QgdG9kYXlfdG9kbyA9IG1ha2VfVG9kYXlfVG9kb19MaXN0KClcclxuICAgICAgICBjb25zb2xlLmxvZyh0b2RheV90b2RvKVxyXG5cclxuXHJcbiAgICAgICAgY29uc3QgdG9kb0xpc3QgPSB0b2RheV90b2RvLm1hcChcclxuICAgICAgICAgICAgdG9kbyA9PlxyXG5cclxuICAgICAgICAgICAgPGxpIHN0eWxlPXtUb2RvX1N0eWxlfSBjbGFzc05hbWU9XCJsaXN0XCIga2V5PXt0b2RvLmlkfT5cclxuICAgICAgICAgICAgPHN0eWxlIGpzeD57YFxyXG4gICAgICAgICAgICAgIC5saXN0OmhvdmVyIHtcclxuICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3IgOiAjZjJmMmYyO1xyXG4gICAgICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAgICAgLnJlbW92ZSB7XHJcbiAgICAgICAgICAgICAgICBtYXJnaW4tbGVmdCA6IDkwJTtcclxuICAgICAgICAgICAgICAgIG1hcmdpbi1ib3R0b20gOiAxMHB4O1xyXG4gICAgICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAgICAgLnJlbW92ZWJ1dHRvbiB7XHJcbiAgICAgICAgICAgICAgICB3aWR0aCA6IDUwcHg7XHJcbiAgICAgICAgICAgICAgICBjb2xvciA6IGJsYWNrO1xyXG4gICAgICAgICAgICAgICAgZm9udC1zaXplIDogMTJweDtcclxuICAgICAgICAgICAgICAgIHBhZGRpbmcgOiA1cHg7XHJcbiAgICAgICAgICAgICAgICBtYXJnaW4tbGVmdCA6IDkwJTtcclxuICAgICAgICAgICAgICAgIG1hcmdpbi1yaWdodCA6IDIwcHg7XHJcbiAgICAgICAgICAgICAgICBkaXNwbGF5IDogZmxleDtcclxuICAgICAgICAgICAgICAgIGZsZXgtZGlyZWN0aW9uIDogY29sdW1uO1xyXG4gICAgICAgICAgICAgICAgYWxpZ24taXRlbXMgOiBjZW50ZXI7XHJcbiAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICBgfTwvc3R5bGU+XHJcbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tmb250U2l6ZSA6ICcxMnB4JywgcGFkZGluZ0JvdHRvbSA6ICc1cHgnLCBjb2xvciA6ICcjOTk5Jyx9fT57dG9kby55ZWFyfS97dG9kby5tb250aH0ve3RvZG8uZGF5fTwvZGl2PlxyXG4gICAgICAgICAgICA8ZGl2Pnt0b2RvLnRpdGxlfTwvZGl2PlxyXG4gICAgICAgICAgICA8cD48L3A+XHJcbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tmb250U2l6ZSA6ICcxM3B4J319Pi17dG9kby5kZXNjcmlwdGlvbn08L2Rpdj5cclxuICAgICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJyZW1vdmVidXR0b25cIiBvbkNsaWNrPXtDbGljay5iaW5kKHRvZG8pfT7sgq3soJw8L2J1dHRvbj5cclxuICAgICAgICAgICAgPHA+PC9wPlxyXG4gICAgICAgICAgICA8UmVwYWlyQnV0dG9uIC8+XHJcbiAgICAgICAgICAgIDxPbmNsaWNrIC8+XHJcbiAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgKVxyXG5cclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgPEFwcD5cclxuICAgICAgICAgICAgICAgIDx1bCBzdHlsZT17e2xpc3RTdHlsZVR5cGUgOiAnbm9uZScsIHBhZGRpbmdMZWZ0IDogJzAnLH19PlxyXG4gICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPXt7fX0+XHJcbiAgICAgICAgICAgICAgICAgICAge3RvZG9MaXN0fVxyXG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDwvdWw+XHJcbiAgICAgICAgICA8L0FwcD5cclxuICAgICAgICApO1xyXG4gICAgfVxyXG59XHJcblxyXG5cclxuZXhwb3J0IGRlZmF1bHQgVG9kYXlUb2RvO1xyXG4iXX0= */\n/*@ sourceURL=C:\\Users\\\uC2B9\uC8FC\\Desktop\\nextjs\\pages\\todaytodo.js */",
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
           style: {
@@ -1684,60 +1680,61 @@ function (_React$Component) {
             paddingBottom: '5px',
             color: '#999'
           },
-          className: "jsx-625304133",
+          className: "jsx-745493353",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92
+            lineNumber: 96
           },
           __self: this
         }, todo.year, "/", todo.month, "/", todo.day), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-          className: "jsx-625304133",
+          className: "jsx-745493353",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 93
+            lineNumber: 97
           },
           __self: this
         }, todo.title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-          className: "jsx-625304133",
+          className: "jsx-745493353",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 94
+            lineNumber: 98
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
           style: {
             fontSize: '13px'
           },
-          className: "jsx-625304133",
+          className: "jsx-745493353",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 95
+            lineNumber: 99
           },
           __self: this
         }, "-", todo.description), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
           onClick: Click.bind(todo),
-          className: "jsx-625304133",
+          className: "jsx-745493353" + " " + "removebutton",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 96
+            lineNumber: 100
           },
           __self: this
-        }, "\uC0AD\uC81C"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_removebutton_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        }, "\uC0AD\uC81C"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+          className: "jsx-745493353",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 97
+            lineNumber: 101
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_repairbutton_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 98
+            lineNumber: 102
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_onclick_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 99
+            lineNumber: 103
           },
           __self: this
         }));
@@ -1745,7 +1742,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_pages_App_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 108
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
@@ -1755,14 +1752,14 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 109
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
         style: {},
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 110
         },
         __self: this
       }, todoList)));

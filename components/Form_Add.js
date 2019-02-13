@@ -35,8 +35,6 @@ class Form_Add extends Component {
     console.log(this.state)
 
     axios.post('http://localhost:5000/add', { title, description, year, month, day })
-  // .then((result) => {
-  // });
   }
 
   render() {
