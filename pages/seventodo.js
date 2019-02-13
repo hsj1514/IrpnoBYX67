@@ -14,7 +14,8 @@ const year = Number(date.substring(0,4))
 
 const month = Number(date.substring(5,7))
 
-const day = Number(date.substring(8,10))
+const day = Number(date.substring(8,10)) + 15
+console.log(day)
 
 
 const Todo_Style = {
@@ -52,32 +53,81 @@ class SevenTodo extends React.Component {
 
     console.log(month_Day_Calculator(month))
 
-    console.log(todos)
 
-
-
-
-    function select_After_Nthday_Todo_Id(todos , n){
+    function select_After_Nthday_Todo_Id(todos , month , n  , day){
       var i = 0;
       var list = [];
-      while(i < todos.length){
-        if(todos[i].day === day+n){
-          list.push(todos[i].id)
+
+      if(todos[i].month === month){
+        while(i < todos.length){
+          if(todos[i].day === day+n && todos[i].month === month){
+            list.push(todos[i].id)
+          }
+          i = i + 1;
         }
-        i = i + 1;
       }
+
+      return list;
+    }
+
+
+    function new_select_After_Nthday_Todo_Id(todos , month , n  , day){
+      var i = 0;
+      var list = [];
+
+      if(todos[i].month === month){
+        while(i < todos.length){
+          if(todos[i].day === day+n && todos[i].month === month + 1 ){
+            list.push(todos[i].id)
+          }
+          i = i + 1;
+        }
+      }
+
       return list;
     }
 
 
     function sortingTodoId(){
-      var i = 1;
-      var start = select_After_Nthday_Todo_Id(todos , 0)
-      while(i < 8){
-        start = start.concat(select_After_Nthday_Todo_Id(todos , i))
-        i = i + 1;
+
+      if(day + 7 > month_Day_Calculator(month)){
+
+
+        var i = 1;
+        var start = select_After_Nthday_Todo_Id(todos , month , 0 , day)
+
+        while(i < month_Day_Calculator(month) - day + 1){
+          start = start.concat(select_After_Nthday_Todo_Id(todos , month , i , day))
+          i = i + 1;
+        }
+
+
+
+        var a = 1;
+        while(a < 7 - month_Day_Calculator(month) + day + 1){
+          start = start.concat(new_select_After_Nthday_Todo_Id(todos , month  , a-1 , 1))
+          console.log(select_After_Nthday_Todo_Id(todos , month+1 , a-1 , 1))
+          console.log(start)
+
+
+          a = a + 1;
+
+
+        }
+
+        return start;
+
+      } else{
+
+        var i = 1;
+        var start = select_After_Nthday_Todo_Id(todos , month , 0 , day)
+        while(i < 8){
+          start = start.concat(select_After_Nthday_Todo_Id(todos , month , i , day))
+          i = i + 1;
+        }
+        return start;
       }
-      return start;
+
     }
 
 
@@ -110,7 +160,7 @@ class SevenTodo extends React.Component {
 
 
 
-        <li style={Todo_Style} className="list" key={todo.toString()}>
+        <li style={Todo_Style} className="list" key={todo.id}>
         <style jsx>{`
           .list:hover {
             background-color : #f2f2f2;
