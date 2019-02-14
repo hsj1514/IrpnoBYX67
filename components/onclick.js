@@ -15,21 +15,13 @@ class Onclick extends React.Component {
         checkboxState: true,
       }
     }
-  onSubmit(event) {
-      event.preventDefault();
 
-      const { checkboxState } = this.state;
-
-    axios.post('http://localhost:5000/check', { checkboxState })
-    .then((result) => {
-    });
-
-    }
   toggle(event) {
     this.setState({
       checkboxState: !this.state.checkboxState
     });
   }
+
   render() {
     const checkedOrNot = [];
     checkedOrNot.push(
@@ -46,11 +38,30 @@ class Onclick extends React.Component {
       </span>
     );
 
+    const id = this.props;
+
+//체크박스 체크하여 계획 완료 시, 해당 계획의 db checkboxState column의 값이 false로 전환됨
+    if(this.state.checkboxState === false){
+      console.log(id)
+      axios.post('http://localhost:5000/checkstate' , id)
+      .then((result) => {
+      });
+    }
+//체크박스 체크를 해제하여 계획 미완료 상태로 바꿀 시, 해당 계획의 db checkboxState column의 값이 true로 전환됨
+    if(this.state.checkboxState === true){
+      console.log(id)
+      axios.post('http://localhost:5000/uncheckstate' , id)
+      .then((result) => {
+      });
+    }
+
+
     return (
       <div>
-        <form onSubmit={this.onSubmit.bind(this)}>
+        <form >
           {checkbox}
-          <button type="submit">(미)완료상태 저장</button>
+
+
         </form>
         {checkedOrNot}
       </div>

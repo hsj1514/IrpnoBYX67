@@ -81,20 +81,28 @@ app.post('/add', function (req, res) {
 })
 
 
-
-app.put('/check', function (req, res) {
-
-  const check = req.body.checkboxState;
-
-
-  connection.query(`INSERT INTO todo (checkboxState) VALUES ( ? )` , [check] , function(err,rows) {
+app.post('/checkstate', function(req, res) {
+  var id = req.body.id
+  console.log(id)
+  connection.query(`UPDATE todo SET checkboxState = ? WHERE id = ? ` , ['false' , id] , function(err,rows){
     if(err) throw err;
 
-    console.log('put success ', rows);
+    console.log('checkboxState update is completed')
     res.send(rows);
+  })
+});
 
-  });
-})
+
+app.post('/uncheckstate', function(req, res) {
+  var id = req.body.id
+  console.log(id)
+  connection.query(`UPDATE todo SET checkboxState = ? WHERE id = ? ` , ['true' , id] , function(err,rows){
+    if(err) throw err;
+
+    console.log('checkboxState update is completed')
+    res.send(rows);
+  })
+});
 
 
 app.get('/deleteall', function (req, res) {

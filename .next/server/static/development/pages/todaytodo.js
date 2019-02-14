@@ -1110,15 +1110,6 @@ function (_React$Component) {
   }
 
   _createClass(Onclick, [{
-    key: "onSubmit",
-    value: function onSubmit(event) {
-      event.preventDefault();
-      var checkboxState = this.state.checkboxState;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://localhost:5000/check', {
-        checkboxState: checkboxState
-      }).then(function (result) {});
-    }
-  }, {
     key: "toggle",
     value: function toggle(event) {
       this.setState({
@@ -1133,14 +1124,14 @@ function (_React$Component) {
         key: checkedOrNot,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 28
         },
         __self: this
       }, this.state.checkboxState ? '미완료' : '완료!'));
       var checkbox = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 31
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -1149,31 +1140,36 @@ function (_React$Component) {
         onClick: this.toggle.bind(this),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 32
         },
         __self: this
       }));
+      var id = this.props; //체크박스 체크하여 계획 완료 시, 해당 계획의 db checkboxState column의 값이 false로 전환됨
+
+      if (this.state.checkboxState === false) {
+        console.log(id);
+        axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://localhost:5000/checkstate', id).then(function (result) {});
+      } //체크박스 체크를 해제하여 계획 미완료 상태로 바꿀 시, 해당 계획의 db checkboxState column의 값이 true로 전환됨
+
+
+      if (this.state.checkboxState === true) {
+        console.log(id);
+        axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('http://localhost:5000/uncheckstate', id).then(function (result) {});
+      }
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 60
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        onSubmit: this.onSubmit.bind(this),
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 61
         },
         __self: this
-      }, checkbox, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }, "(\uBBF8)\uC644\uB8CC\uC0C1\uD0DC \uC800\uC7A5")), checkedOrNot);
+      }, checkbox), checkedOrNot);
     }
   }]);
 
