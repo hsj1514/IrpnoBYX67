@@ -100,7 +100,7 @@ class TodayTodo extends React.Component {
             <button className="removebutton" onClick={Click.bind(todo)}>삭제</button>
             <p></p>
             <RepairButton />
-            <Onclick />
+            <Onclick id={todo.id} />
             </li>
         )
 

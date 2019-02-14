@@ -87,7 +87,7 @@ app.post('/checkstate', function(req, res) {
   connection.query(`UPDATE todo SET checkboxState = ? WHERE id = ? ` , ['false' , id] , function(err,rows){
     if(err) throw err;
 
-    console.log('checkboxState update is completed')
+    console.log('check update is completed')
     res.send(rows);
   })
 });
@@ -99,7 +99,7 @@ app.post('/uncheckstate', function(req, res) {
   connection.query(`UPDATE todo SET checkboxState = ? WHERE id = ? ` , ['true' , id] , function(err,rows){
     if(err) throw err;
 
-    console.log('checkboxState update is completed')
+    console.log('uncheck update is completed')
     res.send(rows);
   })
 });

@@ -4,7 +4,6 @@ import axios from 'axios';
 const BoxStyle = {
   width : '30px',
   height : '30px',
-
 }
 
 
@@ -25,7 +24,7 @@ class Onclick extends React.Component {
   render() {
     const checkedOrNot = [];
     checkedOrNot.push(
-      <p key={checkedOrNot}>{this.state.checkboxState ? '미완료' : '완료!'}</p>
+      <div style={{color : 'red',}} key={checkedOrNot}>{this.state.checkboxState ? '미완료' : '완료!'}</div>
     );
     const checkbox = (
       <span>

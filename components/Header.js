@@ -57,7 +57,7 @@ function Header(){
         <a className="logo">Todo Application</a>
       </Link>
 
-      <Link href="/">
+      <Link href="/successtodo">
         <a className=" achievement" >완료목록 보기</a>
       </Link>
 
